@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Course Outline and Resources for Calculus for Engineers I">
+    <meta name="keywords" content="math, mathematics, calculus, engineer, derivatives, integrals, 135,cmu">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css"/>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math135 | Engineering Calc I</title>
+</head>
+
+<header>
+<h1>Math135 |&nbsp;Engineering&nbsp;Calc&nbsp;I</h1>
+<ul>
+    <li> <address><a href="..">Course Outline</a></address> </li>
+    <li> Last tended 9 November 2022 </li>
+</ul>
+</header>
+
+<main>
+<h2>Overview of Differentiation</h2>
+<p>
+Since learning the language of limits
+and the idea of continuity of functions,
+we now have all we need to define the <em>derivative</em> of a function
+and will immediately discuss two important things:
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        Know and understand the definition of the derivative of a function, 
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
+        = \lim\limits_{h \to 0} \frac{f(x+h) - f(x)}{h}\,,
+        \]
+        and how you can think of this derivative 
+        as a rate of change of the function output 
+        relative to the function input, 
+        <em>or</em> how you can think of it geometrically 
+        as a slope of a tangent line.
+    </li>
+    <li>
+        <h4>Skill</h4>
+        Be able to write a formula for the derivative of any function 
+        expressed in terms of rational functions, trigonometric functions, 
+        or power functions (e.g. square roots, etc).  
+    </li>
+</ul>
+<p>
+The former of these is a concept you must internalize 
+as you work through exercises, reading examples, 
+and generally reading about calculus. 
+(You do read, right? If not the textbook, 
+then any helpful notes or pages online.)
+The latter is a skill you can practice until you feel proficient, 
+and luckily 
+<a title="Google Image search of derivative exercises" href="https://www.google.com/search?tbm=isch&q=derivative%20exercises&tbs=imgo:1">such exercises are plentiful online</a>. 
+Sometimes those exercises are accompanied by solutions, 
+but if they’re not
+<a href="https://www.wolframalpha.com/calculators/derivative-calculator/">Wolfram|Alpha can compute derivatives for you</a>.
+A word of caution though: 
+the expectation is that <em>you</em> can compute derivatives. 
+Let Wolfram|Alpha be your aid, not your crutch—hopefully 
+similar to the relationship you have with your calculator.
+</p>
+<img>
+<!-- TK Who is better at math? -->
+<!-- picture HTML tag? -->
+</img>
+<p>
+Once you are comfortable taking derivatives of functions \(y = f(x)\) 
+where the effect the independent variable \(x\), 
+the variable you’re differentiating with respect to,
+has on a dependent variable \(y\) is made <q>explicit</q>
+you’ll need to extend this skill,
+applying it to equations where the relationship between \(x\) 
+and any independent variables is only <q>implicit</q>.
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        Be able to implicitly differentiate any equation 
+        involving rational expressions, trigonometric expressions, 
+        or power terms (e.g. square roots, etc).  
+    </li>
+</ul>
+<p>
+Just like with explicit differentiation, 
+there are plenty of exercises and worked-out examples online,
+and you can compare your computations with 
+<a title="Wolfram|Alpha implicit differentiation example" href="https://www.wolframalpha.com/input?i=implicit+differentiation+for+ye%5Ex%3Dx-y">Wolfram|Alpha’s</a>. 
+</p>
+<img>
+<!-- IDK put somethinghere?? -->
+</img>
+<p>
+In class we’ll spend time thinking about the graphs of functions,
+and what more we can say about those graphs
+given our new knowledge of derivatives.
+This isn’t an important skill we’re learning though.
+The purpose of doing this is to buff your 
+understanding of the concept of a derivative,
+and give you a visual perspective on the relationship
+between a function and its derivative.
+</p>
+<p>
+Beyond this, there are three important 
+uses of differentiation we’ll talk about.
+</p>
+<ul>
+    <li>
+        <h4>Application</h4>
+        Be able to apply your differentiation skills
+        to analyze <em>dynamic</em> situations, 
+        i.e. situations that aren’t static, that are changing over time.
+        The ubiquitous class of problems 
+        that require this ability to solve are called
+        <a title="Paul’s Online Notes: Related Rates" href="https://tutorial.math.lamar.edu/classes/calci/relatedrates.aspx">related rates problems</a>.
+    </li>
+    <li>
+        <h4>Application</h4>
+        Be able to apply your differentiation skills
+        to optimize some quantity,
+        minimize or maximize some function,
+        relative to some changing parameters.
+        The ubiquitous class of problems 
+        that require this ability to solve are called
+        <a title="Paul’s Online Notes: Optimization" href="https://tutorial.math.lamar.edu/classes/calci/optimization.aspx">optimization problems</a>.
+    </li>
+</ul>
+<p>
+The first of these will require you 
+to be adept at implicit differentiation.
+The second will simply be an extension of a skill that (I hope!) 
+you’ve already practiced before in math class.
+Both of these will require that you be comfortable
+synthesizing mathematical equations and relationships
+from a concrete situation.
+And luckily both of these topics are well documented on the internet;
+you way want to append the phrases <q>calculus 1</q> or <q>single variable</q>
+to your search phrases though.
+</p>
+<p>
+There is one last numerical/computational application
+of differentiation we’ll discuss.
+</p>
+<ul>
+    <li>
+        <h4>Application</h4>
+        Perform
+        <a title="Paul’s Online Notes: Newton’s Method" href="https://tutorial.math.lamar.edu/classes/calci/newtonsmethod.aspx">Newton’s method</a> 
+        manually, and understand that lines are very useful.
+    </li>
+</ul>
+<p>
+It’s more important that you understand the <em>idea</em>
+behind Newton’s method rather than be proficient at working it out manually;
+the goal here is <em>familiarity</em>, not <em>fluency</em>,
+so that one day you could implement it with a computer if you need to.
+If you’re practicing computer programming while taking this class though,
+you might as well implement it now.
+</p>
+<p>
+In the next segment of class we’ll explore 
+differentiation’s dual operation: integration.
+</p>
+<img>
+<!-- Scary integrals -->
+</img>
+</main>
+
+<footer>
+<ul>
+    <li> © <a href="https://org.coloradomesa.edu/~mapierce2/">Mike Pierce</a> </li>
+    <li> <a href="https://www.coloradomesa.edu/math-stat">CMU Math</a> </li>
+    <li> <a href="LICENSE.txt">License</a> </li>
+</ul>
+</footer>
+
+</html>
+

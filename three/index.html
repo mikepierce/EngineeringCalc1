@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Course Outline and Resources for Calculus for Engineers I">
+    <meta name="keywords" content="math, mathematics, calculus, engineer, derivatives, integrals, 135,cmu">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css"/>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math135 | Engineering Calc I</title>
+</head>
+
+<header>
+<h1>Math135 |&nbsp;Engineering&nbsp;Calc&nbsp;I</h1>
+<ul>
+    <li> <address><a href="..">Course Outline</a></address> </li>
+    <li> Last tended 9 November 2022 </li>
+</ul>
+</header>
+
+<main>
+<h2>Overview of Integration Basics</h2>
+<p>
+Now that we know basically everything about differentiation,
+it’s time to turn our attention to the other side 
+of the story of calculus: integration.
+First we’ll surmount two conceptual hurdles,
+understanding what integration <em>is</em>
+and how it relates to differentiation.
+</p>
+<ul>
+<li>
+    <h4>Concept</h4>
+    Understand that the definite integral 
+    \(\int_a^b f(t) \;\mathrm{d}t\) 
+    has a <q>physical</q> interpretation 
+    as the total amount of <em>something</em>
+    that \(f\) has accumulated 
+    as its input moves from \(a\) to \(b\),
+    but also a geometric interpretation as
+    the signed area of the region bound by
+    the graph of \(y=f(t)\) and the \(t\)-axis
+    between \(a\) and \(b\).
+    Furthermore understand what the function
+    \(\int_0^t f\) represents.
+</li>
+<li>
+    <h4>Concept</h4>
+    Have a <em>working</em> understanding of 
+    the fundamental theorem of calculus,
+    knowing abstractly that differentiation 
+    and integration are <q>inverse</q> operations,
+    and knowing concretely that
+    \[
+        \newcommand{\ddt}{\frac{\mathrm{d}}{\mathrm{d}t}}
+        \ddt \int\limits_a^t f = f(t)
+        \quad\text{and}\quad
+        \int\limits_a^b \ddt f(t) \;\mathrm{d}t = f(b) - f(a)
+        \,.
+    \]
+</li>
+</ul>
+<p>
+Knowing these two concepts are the core
+to being <em>fluent</em> in the language of calculus.
+It’s important to understand what \(\int\) 
+means if encountered outside of math class,
+and to be able to comfortably work with it in calculations.
+After internalizing these core concepts, 
+there is a skill that the second equation
+of the fundamental theorem of calculus demands we practice.
+</p>
+<ul>
+<li>
+    <h4>Skill</h4>
+    Be able to compute an <em>antiderivative</em> of a function.
+    I.e. given a formula for a function’s derivative
+    \(\frac{\mathrm{d}}{\mathrm{d}t}f\),
+    figure out a formula for \(f\).
+</li>
+</ul>
+<p>
+Unlike the analogous skill of computing derivatives,
+there is no reliable procedure to follow 
+when computing antiderivatives.
+Instead, honing this skill involves some creativity.
+You will not master this skill in this class,
+but you’ll learn a few basic tools,
+and get some practice channeling that creativity.
+In <a href="../../136">the next course</a>
+you’ll learn more tools and further hone this skill.
+</p>
+<p>
+The first of these basic tools is simply <em>pattern recognition</em>.
+E.g. you know that the derivative of \(\tan(x)\) is \(\sec^2(x)\),
+so you should recognize that you know \(\int \sec^2(x) \;\mathrm{d}x\).
+The next of these tools is that the power-rule works in reverse:
+\[
+    \int x^n \;\mathrm{d}x = \frac{1}{n+1}x^{n+1} + C
+    \qquad\text{for } x\neq -1\,.
+\]
+And then we’ll talk about the method of 
+<a href="https://en.wikipedia.org/wiki/Integration_by_substitution">substitution</a>,
+a method of undoing the chain rule.
+When searching the internet for integration exercises
+be sure to include the keyword <q>substitution</q>
+to avoid exercises you are not ready for.
+And when practicing, you can check your calculations with
+<a href="https://www.wolframalpha.com/calculators/integral-calculator/">Wolfram|Alpha</a>
+</p>
+<p>
+Once this skill is developed we’ll talk about 
+some applications of integration
+that rely heavily on wielding that skill 
+and understanding the core concepts of integration.
+</p>
+<ul>
+<li>
+    <h4>Application</h4>
+    Be able to compute the area of any region in the coordinate plane
+    bounded by the graphs of functions.
+</li>
+<li>
+    <h4>Application</h4>
+    Know that the volume of a
+    <a title="Wikipedia: Solid of Revolution" href="https://en.wikipedia.org/wiki/Solid_of_revolution">solid of revolution</a>
+    can be thought of as the accumulation of areas of cross-sections
+    along either an axis or a radius,
+    and be able to compute this volume as an integral.
+</li>
+<li>
+    <h4>Application</h4>
+    Know that <em>work</em> is the accumulation of <em>force</em> applied 
+    over the <em>displacement</em> of some mass,
+    and be able to compute this work as an integral.
+</li>
+</ul>
+<p>
+Each of these require the understanding of an integral 
+as an accumulation of something.
+The first two are applications of integration to geometry,
+which feels insincere as an <q>application</q>,
+but provides good practice of your spatial reasoning.
+The latter one though exemplifies calculus’ utility
+to science as a whole.
+</p>
+<p>
+And that’s it! 
+That’s the beginning of the story of calculus.
+In the sequel to this class we’ll dive deeper
+into techniques of evaluating integrals,
+get lost in the mysteries of \(\infty\) 
+learning to find the limits of sequences and evaluate series,
+and culminate the single-variable calculus adventure
+by learning 
+<a title="Wikipedia: Taylors Theorem" href="https://en.wikipedia.org/wiki/Taylor's_theorem">Taylor’s theorem</a>.
+</p>
+</main>
+
+<footer>
+<ul>
+    <li> © <a href="https://org.coloradomesa.edu/~mapierce2/">Mike Pierce</a> </li>
+    <li> <a href="https://www.coloradomesa.edu/math-stat">CMU Math</a> </li>
+    <li> <a href="LICENSE.txt">License</a> </li>
+</ul>
+</footer>
+
+</html>
+
