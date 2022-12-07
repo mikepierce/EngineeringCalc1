@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math135 | Areas and Volumes</title>
+</head>
+
+<body>
+<header>
+    <h1>Areas &amp; Volumes</h1>
+</header>
+<main>
+<ol>
+    <li class="star">
+        There is a line through the origin 
+        that divides the region bounded by the parabola 
+        \(y = x - x^2\) and the \(x\)-axis into two regions 
+        with equal area. What is the slope of that line?
+        (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Source</a>)
+    </li>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Source</a>)
+        A <em>clepsydra</em>, or water clock, 
+        is a glass container with a small hole in the bottom 
+        through which water can flow. The “clock” is calibrated 
+        for measuring time by placing markings on the container
+        corresponding to water levels at equally spaced times. 
+        Let \(x = f(y)\) be continuous on the interval
+        \([0, b]\) and assume that the container is formed 
+        by rotating the graph of \(f\) about the \(y\)-axis. 
+        Let \(V\) denote the volume of water and \(h\) 
+        the height of the water level at time \(f\).
+        <figure>
+        <img width="432" src="img/clepsydra.png">
+        </figure>
+        <ol>
+            <li>
+            Determine \(V\) as a function of \(h\).
+            </li>
+            <li>
+            Show that
+            \[
+            \frac{\mathrm{d}V}{\mathrm{d}t} 
+            = \pi \big(f(h)\big)^2 \frac{\mathrm{d}h}{\mathrm{d}t} 
+            \,.\]
+            </li>
+            <li>
+            Suppose that \(A\) is the area of the hole 
+            in the bottom of the container. 
+            It follows from Torricelli’s Law that the rate of change 
+            of the volume of the water is given by
+            \[
+            \frac{\mathrm{d}V}{\mathrm{d}t} 
+            = kA \sqrt{h}
+            \]
+            where \(k\) is a negative constant. 
+            Determine a formula for the function \(f\) 
+            such that \(\mathrm{d}h/\mathrm{d}t\) is a
+            constant \(C\). 
+            What is the advantage in having 
+            \(\mathrm{d}h/\mathrm{d}t = C\)?
+            </li>
+        </ol>
+    </li>
+    <li class="star">
+    (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Source</a>)
+    A cylindrical glass of radius \(r\) and height \(L\) 
+    is filled with water and then tilted until the water
+    remaining in the glass exactly covers its base.
+    <figure>
+    <img width="432" src="img/cylinder-water.png">
+    </figure>
+    <ol>
+        <li>
+        Determine a way to “slice” the water 
+        into parallel rectangular cross-sections and then set up a
+        definite integral for the volume of the water in the glass.
+        </li>
+        <li>
+        Determine a way to “slice” the water 
+        into parallel cross-sections that are trapezoids and then
+        set up a definite integral for the volume of the water.
+        </li>
+        <li>
+        Find the volume of water in the glass 
+        by evaluating one of the integrals you set up.
+        </li>
+        <li>
+        Find the volume of the water in the glass 
+        from purely geometric considerations.
+        </li>
+        <li>
+        Suppose the glass is tilted until the water 
+        exactly covers <em>half</em> the base. 
+        In what direction can you “slice” the water into triangular cross-sections? 
+        Rectangular cross-sections? 
+        Cross-sections that are segments of circles? 
+        Find the volume of water in the glass.
+        </li>
+    </ol>
+    </li>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Source</a>)
+        The figure shows a curve \(C\) with the property that, 
+        for every point \(P\) on the middle curve \(y = 2x^2\),
+        the areas \(A\) and \(B\) are equal. Find an equation for \(C\).
+        <figure>
+        <img width="432" src="img/curve-equal-areas.png">
+        </figure>
+    </li>
+    <li class="star">
+        (<a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">Source</a>)
+        If the tangent at a point \(P\) on the curve \(y = x^3\)
+        intersects the curve again at \(Q\), let \(A\) be the
+        area of the region bounded by the curve and the line segment \(PQ\). 
+        Let \(B\) be the area of the region
+        defined in the same way starting with \(Q\) instead of \(P\). 
+        What is the relationship between \(A\) and \(B\)?
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+
