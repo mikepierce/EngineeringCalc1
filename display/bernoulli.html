@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math135 | Bernoulli</title>
+</head>
+
+<body>
+<header>
+    <h1>Bernoulli Polynomials &amp; the Sum-of-Powers Formulas</h1>
+</header>
+<main>
+<blockquote>
+This is a very slightly adapted version
+of a guided sequence of questions from some 
+<a href="https://www.stewartcalculus.com/data/default/upfiles/8e_challprobs_student.pdf"><cite>Challenge Problems</cite> written by Stewart</a>
+posted publicly on his website
+as a supplement to his Calculus textbook.
+</blockquote>
+<p>
+We used the formulas for the sums of the \(k\)<sup>th</sup> powers 
+of the first \(n\) integers when \(k = 1, 2,\) and \(3\). 
+Now we’re going to derive these formulas for any \(k\). 
+These formulas were first published in 1713 
+by the Swiss mathematician James Bernoulli in his book <cite>Ars Conjectandi</cite>.
+</p>
+<ol>
+    <li>
+        The <em>Bernoulli polynomials</em> \(B_n\) 
+        are defined by \(B_0(x) = 1\), \(B'_n(x) = B_{n-1}(x)\), 
+        and \(\int_0^1 B_n(x) \,\mathrm{d}x = 0\)
+        for \(n = 1, 2,3,\dotsc\). 
+        Find an explicit formula for \(B_n(x)\)
+        for \(n = 1, 2, 3\), and \(4\).
+    </li>
+    <li>
+        Use the Fundamental Theorem of Calculus 
+        to show that \(B_n(0) = B_n(1)\) for \(n \geq 2\).
+    </li>
+    <li>
+        If we introduce the <em>Bernoulli numbers</em> 
+        \(b_n = n! B_n(0)\), then we can write
+        \[ \begin{align*}
+        B_0(x) &= b_0
+        \\B_1(x) &= \frac{x}{1!} + \frac{b_1}{1!}
+        \\B_2(x) &= \frac{x^2}{2!} + \frac{b_1}{1!}\frac{x}{1!} + \frac{b_2}{2!}
+        \\B_3(x) &= \frac{x^3}{3!} + \frac{b_1}{1!}\frac{x^2}{2!} + \frac{b_2}{2!}\frac{x}{1!} + \frac{b_3}{3!}
+        \end{align*} \]
+        and in general 
+        \[ B_n(x) = \frac{1}{n!} \sum_{k=0}^{n} \binom{n}{k} b_kx^{n-k}
+        \quad\text{where}\quad
+        \binom{n}{k} = \frac{n!}{k!(n-k)!} \,.  \]
+        Show that for \(n \geq 2\) that
+        \[ b_n = \sum_{k=0}^{n} \binom{n}{k} b_k \]
+        and therefore
+        \[ b_{n-1} = -\frac{1}{n}\left(
+        \binom{n}{0}b_0 + 
+        \binom{n}{1}b_1 + 
+        \binom{n}{2}b_2 + 
+        \dotsb +
+        \binom{n}{n-2}b_{n-2}
+        \right) \]
+        This gives an efficient way of computing Bernoulli numbers
+        and therefore the Bernoulli polynomials.
+    </li>
+    <li>
+        Show that \(B_n(1-x) = (-1)^nB_n(x)\)
+        and deduce that \(b_{2n+1} = 0\) for \(n \gt 1\).
+    </li>
+    <li>
+        Calculate \(b_6\) and \(b_8\) explicitly,
+        and then calculate the polynomials 
+        \(B_5\), \(B_6\), \(B_7\), \(B_8\), and \(B_9\).
+    </li>
+    <li>
+        Graph the Bernoulli polynomials \(B_1\), \(B_2\), …, \(B_9\) 
+        for \(0 \leq x \leq 1\). What pattern do you notice in the graphs?
+    </li>
+    <li>
+        Use mathematical induction to prove that 
+        \(B_{k+1}(x+1) - B_{k+1}(x) = x^k/k!\,.\)
+    </li>
+    <li>
+        By putting \(x = 0,1,2,\dotsc,n\) 
+        in the previous formula, prove that
+        \[\begin{align*}
+        1^k + 2^k + 3^k + \dotsb + n^k
+        &= k! \left( B_{k+1}(n+1) - B_{k+1}(0) \right)
+        \\&= k! \int\limits_{0}^{n+1} B_k(x) \,\mathrm{d}x
+        \,.
+        \end{align*} \]
+    </li>
+    <li>
+        Show that the last formula can be written symbolically as
+        \[
+        1^k + 2^k + 3^k + \dotsb + n^k
+        = \frac{1}{k+1}\left( (n+1+b)^{k+1} - b^{k+1} \right)
+        \]
+        where the expression \((n + 1 + b)^{k+1}\) 
+        is to be expanded formally using the Binomial
+        Theorem and each power \(b^i\) is to be replaced 
+        by the Bernoulli number \(b_i\).
+    </li>
+    <li>
+        Use this formula to find a closed form for 
+        \[1^4 + 2^4 + 3^4 + \dotsb + n^4
+        \quad\text{and}\quad
+        1^5 + 2^5 + 3^5 + \dotsb + n^5\]
+        and generally for \(\sum_{i=1}^{n} i^k\) 
+        for any positive integer \(k\).
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+
