@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Course Outline and Resources for Calculus for Engineers I">
+    <meta name="keywords" content="math, mathematics, calculus, engineer, derivatives, integrals, 135,cmu">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css"/>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>Math135 | Engineering Calc I</title>
+</head>
+
+<header>
+<h1>Math135 |&nbsp;Engineering Calc&nbsp;I</h1>
+<ul>
+    <li> <a href="../.."><address>Mike Pierce</address></a> </li>
+    <li> <a href=".."><address>Course Outline</address></a> </li>
+    <li> Last tended 11 Dec 2022 </li>
+    <li> <a href="https://github.com/mikepierce/Outline-EngineeringCalc1">Fork on GitHub</a> </li>
+</ul>
+</header>
+
+<main>
+<p>
+Sometimes the purpose of taking a course 
+becomes obfuscated over its duration;
+it can become hard to appreciate the plot of a story 
+when there’s too much exposition.
+This narrative overview, in its brevity, 
+serves to summarize the plot of this course
+and to clarify our purpose,
+for the sake of keeping both student and instructor 
+focused on what’s important.
+</p>
+<section>
+<h2>Limits &amp; Continuity</h2>
+<p>
+In the beginning of the story of calculus
+there are some minor characters we must meet.
+These characters’ primary importance is to 
+introduce us to the protagonists of calculus,
+differentiation and the integration,
+but we should know them in their own right first.
+The first of these minor characters 
+is the limit.
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        <p>
+        Understand what the notation
+        \( \lim\limits_{x \to x_0} f(x) \) means.
+        </p>
+    </li>
+    <li>
+        <h4>Skill</h4>
+        <p>
+        Be able to compute
+        \( \lim\limits_{x \to x_0} f(x) \)
+        either numerically or precisely.
+        </p>
+    </li>
+</ul>
+<p>
+The important idea behind introducing the limit 
+is that we need language and notation
+for talking what what’s happening <em>around</em> a point \(x_0\), 
+instead of directly at the point.
+While discussing the purpose of the course,
+we’ll gradually reveal the limit’s relationship to the derivative
+and how it can help us find the slope
+of a line tangent to a curve at a given point.
+</p>
+<p>
+The other of minor character
+is the concept of <em>continuity</em> of a function.
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        <p>
+        Understand what it means for a function
+        to be continuous on some domain,
+        and why many natural phenomenon morally
+        <em>should</em> be modelled a continuous function.
+        </p>
+    </li>
+</ul>
+<p>
+We can only apply the techniques of calculus,
+define the derivative and integral of a function 
+on some domain as a formula,
+if we take the hypothesis that the function 
+is continuous on that domain.
+</p>
+<p>
+One last thing: 
+I hope you all feel free and comfortable coming to talk to me, 
+either about mathematics or about this class in general. 
+If there is anything I can do 
+to make communication feel more comfortable, 
+please let me know. 
+Education is generally more beneficial 
+when treated more like a conversation 
+between student and teacher rather than a 
+<a title="Wikipedia: Banking Model of Education" href="https://en.wikipedia.org/wiki/Banking_model_of_education">one-way transfer of information</a>. 
+</p>
+</section>
+<section>
+<h2>Differentiation</h2>
+<p>
+Since learning the language of limits
+and the idea of continuity of functions,
+we now have all we need to define the <em>derivative</em> of a function
+and will immediately discuss two important things:
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        <p>
+        Know and understand the definition of the derivative of a function, 
+        \[
+        \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
+        = \lim\limits_{h \to 0} \frac{f(x+h) - f(x)}{h}\,,
+        \]
+        and how you can think of this derivative 
+        as a rate of change of the function output 
+        relative to the function input, 
+        <em>or</em> how you can think of it geometrically 
+        as a slope of a tangent line.
+        </p>
+    </li>
+    <li>
+        <h4>Skill</h4>
+        <p>
+        Be able to write a formula for the derivative of any function 
+        expressed in terms of rational functions, trigonometric functions, 
+        or power functions (e.g. square roots, etc).  
+        </p>
+    </li>
+</ul>
+<p>
+The former of these is a concept you must internalize 
+as you work through exercises, reading examples, 
+and generally reading about calculus. 
+(You do read, right? If not the textbook, 
+then any helpful notes or pages online.)
+The latter is a skill you can practice until you feel proficient, 
+and luckily 
+<a title="Google Image search of derivative exercises" href="https://www.google.com/search?tbm=isch&q=derivative%20exercises&tbs=imgo:1">such exercises are plentiful online</a>. 
+Sometimes those exercises are accompanied by solutions, 
+but if they’re not
+<a href="https://www.wolframalpha.com/calculators/derivative-calculator/">Wolfram|Alpha can compute derivatives for you</a>.
+A word of caution though: 
+the expectation is that <em>you</em> can compute derivatives. 
+Let Wolfram|Alpha be your aid, not your crutch—hopefully 
+similar to the relationship you have with your calculator.
+</p>
+<p>
+Once you are comfortable taking derivatives of functions \(y = f(x)\) 
+where the effect the independent variable \(x\), 
+the variable you’re differentiating with respect to,
+has on a dependent variable \(y\) is made <q>explicit</q>
+you’ll need to extend this skill,
+applying it to equations where the relationship between \(x\) 
+and any independent variables is only <q>implicit</q>.
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        <p>
+        Be able to implicitly differentiate any equation 
+        involving rational expressions, trigonometric expressions, 
+        or power terms (e.g. square roots, etc).  
+        </p>
+    </li>
+</ul>
+<p>
+Just like with explicit differentiation, 
+there are plenty of exercises and worked-out examples online,
+and you can compare your computations with 
+<a title="Wolfram|Alpha implicit differentiation example" href="https://www.wolframalpha.com/input?i=implicit+differentiation+for+ye%5Ex%3Dx-y">Wolfram|Alpha’s</a>. 
+</p>
+<p>
+In class we’ll spend time thinking about the graphs of functions,
+and what more we can say about those graphs
+given our new knowledge of derivatives.
+This isn’t an important skill we’re learning though.
+The purpose of doing this is to buff your 
+understanding of the concept of a derivative,
+and give you a visual perspective on the relationship
+between a function and its derivative.
+</p>
+<p>
+Beyond this, there are three important 
+uses of differentiation we’ll talk about.
+</p>
+<ul>
+    <li>
+        <h4>Application</h4>
+        <p>
+        Be able to apply your differentiation skills
+        to analyze <em>dynamic</em> situations, 
+        i.e. situations that aren’t static, that are changing over time.
+        The ubiquitous class of problems 
+        that require this ability to solve are called
+        <a title="Paul’s Online Notes: Related Rates" href="https://tutorial.math.lamar.edu/classes/calci/relatedrates.aspx">related rates problems</a>.
+        </p>
+    </li>
+    <li>
+        <h4>Application</h4>
+        <p>
+        Be able to apply your differentiation skills
+        to optimize some quantity,
+        minimize or maximize some function,
+        relative to some changing parameters.
+        The ubiquitous class of problems 
+        that require this ability to solve are called
+        <a title="Paul’s Online Notes: Optimization" href="https://tutorial.math.lamar.edu/classes/calci/optimization.aspx">optimization problems</a>.
+        </p>
+    </li>
+</ul>
+<p>
+The first of these will require you 
+to be adept at implicit differentiation.
+The second will simply be an extension of a skill that (I hope!) 
+you’ve already practiced before in math class.
+Both of these will require that you be comfortable
+synthesizing mathematical equations and relationships
+from a concrete situation.
+And luckily both of these topics are well documented on the internet;
+you way want to append the phrases <q>calculus 1</q> or <q>single variable</q>
+to your search phrases though.
+</p>
+<p>
+There is one last numerical/computational application
+of differentiation we’ll discuss.
+</p>
+<ul>
+    <li>
+        <h4>Application</h4>
+        <p>
+        Perform
+        <a title="Paul’s Online Notes: Newton’s Method" href="https://tutorial.math.lamar.edu/classes/calci/newtonsmethod.aspx">Newton’s method</a> 
+        manually, and understand that lines are very useful.
+        </p>
+    </li>
+</ul>
+<p>
+It’s more important that you understand the <em>idea</em>
+behind Newton’s method rather than be proficient at working it out manually;
+the goal here is <em>familiarity</em>, not <em>fluency</em>,
+so that one day you could implement it with a computer if you need to.
+If you’re practicing computer programming while taking this class though,
+you might as well implement it now.
+</p>
+<p>
+In the next segment of class we’ll explore 
+differentiation’s dual operation: integration.
+</p>
+</section>
+<section>
+<h2>Integration Basics</h2>
+<p>
+Now that we know basically everything about differentiation,
+it’s time to turn our attention to the other side 
+of the story of calculus: integration.
+First we’ll surmount two conceptual hurdles,
+understanding what integration <em>is</em>
+and how it relates to differentiation.
+</p>
+<ul>
+    <li>
+        <h4>Concept</h4>
+        <p>
+        Understand that the definite integral 
+        \(\int_a^b f(t) \;\mathrm{d}t\) 
+        has a <q>physical</q> interpretation 
+        as the total amount of <em>something</em>
+        that \(f\) has accumulated 
+        as its input moves from \(a\) to \(b\),
+        but also a geometric interpretation as
+        the signed area of the region bound by
+        the graph of \(y=f(t)\) and the \(t\)-axis
+        between \(a\) and \(b\).
+        Furthermore understand what the function
+        \(\int_0^t f\) represents.
+        </p>
+    </li>
+    <li>
+        <h4>Concept</h4>
+        <p>
+        Have a <em>working</em> understanding of 
+        the fundamental theorem of calculus,
+        knowing abstractly that differentiation 
+        and integration are <q>inverse</q> operations,
+        and knowing concretely that
+        \[
+            \newcommand{\ddt}{\frac{\mathrm{d}}{\mathrm{d}t}}
+            \ddt \int\limits_a^t f = f(t)
+            \quad\text{and}\quad
+            \int\limits_a^b \ddt f(t) \;\mathrm{d}t = f(b) - f(a)
+            \,.
+        \]
+        </p>
+    </li>
+</ul>
+<p>
+Knowing these two concepts are the core
+to being <em>fluent</em> in the language of calculus.
+It’s important to understand what \(\int\) 
+means if encountered outside of math class,
+and to be able to comfortably work with it in calculations.
+After internalizing these core concepts, 
+there is a skill that the second equation
+of the fundamental theorem of calculus demands we practice.
+</p>
+<ul>
+    <li>
+        <h4>Skill</h4>
+        <p>
+        Be able to compute an <em>antiderivative</em> of a function.
+        I.e. given a formula for a function’s derivative
+        \(\frac{\mathrm{d}}{\mathrm{d}t}f\),
+        figure out a formula for \(f\).
+        </p>
+    </li>
+</ul>
+<p>
+Unlike the analogous skill of computing derivatives,
+there is no reliable procedure to follow 
+when computing antiderivatives.
+Instead, honing this skill involves some creativity.
+You will not master this skill in this class,
+but you’ll learn a few basic tools,
+and get some practice channeling that creativity.
+In <a href="../../136">the next course</a>
+you’ll learn more tools and further hone this skill.
+</p>
+<p>
+The first of these basic tools is simply <em>pattern recognition</em>.
+E.g. you know that the derivative of \(\tan(x)\) is \(\sec^2(x)\),
+so you should recognize that you know \(\int \sec^2(x) \;\mathrm{d}x\).
+The next of these tools is that the power-rule works in reverse:
+\[
+    \int x^n \;\mathrm{d}x = \frac{1}{n+1}x^{n+1} + C
+    \qquad\text{for } x\neq -1\,.
+\]
+And then we’ll talk about the method of 
+<a href="https://en.wikipedia.org/wiki/Integration_by_substitution">substitution</a>,
+a method of undoing the chain rule.
+When searching the internet for integration exercises
+be sure to include the keyword <q>substitution</q>
+to avoid exercises you are not ready for.
+And when practicing, you can check your calculations with
+<a href="https://www.wolframalpha.com/calculators/integral-calculator/">Wolfram|Alpha</a>
+</p>
+<p>
+Once this skill is developed we’ll talk about 
+some applications of integration
+that rely heavily on wielding that skill 
+and understanding the core concepts of integration.
+</p>
+<ul>
+    <li>
+        <h4>Application</h4>
+        <p>
+        Be able to compute the area of any region in the coordinate plane
+        bounded by the graphs of functions.
+        </p>
+    </li>
+    <li>
+        <h4>Application</h4>
+        <p>
+        Know that the volume of a
+        <a title="Wikipedia: Solid of Revolution" href="https://en.wikipedia.org/wiki/Solid_of_revolution">solid of revolution</a>
+        can be thought of as the accumulation of areas of cross-sections
+        along either an axis or a radius,
+        and be able to compute this volume as an integral.
+        </p>
+    </li>
+    <li>
+        <h4>Application</h4>
+        <p>
+        Know that <em>work</em> is the accumulation of <em>force</em> applied 
+        over the <em>displacement</em> of some mass,
+        and be able to compute this work as an integral.
+        </p>
+    </li>
+</ul>
+<p>
+Each of these require the understanding of an integral 
+as an accumulation of something.
+The first two are applications of integration to geometry,
+which feels insincere as an <q>application</q>,
+but provides good practice of your spatial reasoning.
+The latter one though exemplifies calculus’ utility
+to science as a whole.
+</p>
+<p>
+And that’s it! 
+That’s the beginning of the story of calculus.
+In the sequel to this class we’ll dive deeper
+into techniques of evaluating integrals,
+get lost in the mysteries of \(\infty\) 
+learning to find the limits of sequences and evaluate series,
+and culminate the single-variable calculus adventure
+by learning 
+<a title="Wikipedia: Taylors Theorem" href="https://en.wikipedia.org/wiki/Taylor's_theorem">Taylor’s theorem</a>.
+</p>
+</section>
+</main>
+
+<footer>
+<ul>
+    <li> © <a href="https://org.coloradomesa.edu/~mapierce2/">Mike Pierce</a> </li>
+    <li> <a href="https://www.coloradomesa.edu/math-stat">CMU Math</a> </li>
+    <li> License <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
+</ul>
+</footer>
+
+</html>
+
