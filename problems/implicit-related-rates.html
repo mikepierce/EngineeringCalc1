@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Mike Pierce">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+    <title>ImplicitDifferentiationRelatedRates-Math135</title>
+</head>
+
+<body>
+<header>
+    <h1> Implicit Differentiation &amp; Related Rates </h1>
+</header>
+<main>
+<p>
+Remember that \(\frac{\mathrm{d}y}{\mathrm{d}x}\) 
+and \(y'\) and \(\dot y\) are each different notation 
+for the same thing, the derivative of \(y\).
+The latter two should only be used when 
+the independent variable—the variable that you’re taking
+the derivative with respect to, usually \(x\) or \(t\)—is 
+clear from the context.
+</p>
+<ol>
+    <li>
+        If \(x + y + xy + y^2 + x^2 = 5\),
+        what must \(\dot y\) be?
+    </li>
+    <li>
+        What is an equation of the line tangent
+        to the curve \((xy)^3-2x(x+1)-y=2\)
+        at the point \((1,2)\)?
+    </li>
+    <li>
+        What’s the slope of the line tangent to 
+        the curve \(\tan(xy) = 1\) at the point 
+        \(\left(\frac{\pi}{2}, \frac{1}{2}\right)\)?
+    </li>
+</ol>
+<ol>
+    <li>
+        Suppose a police cruiser is chasing a speeding car. The police cruiser is heading south approaching an intersection, and the speeding car has already passed the intersection and is heading east. When the police cruiser is 0.6 mi north of the intersection, the car is 0.8 mi to the east, and the police radar determines that the distance between them and the car is increasing at 20mph. If the cruiser is moving at 60mph when this measurement is made, what is the speed of the car?
+        (<a href="https://www.ocf.berkeley.edu/~reinholz/ed/08sp_m160/lectures/derivatives_related_rates.tex">Source</a>)
+    </li>
+    <li>
+        An oil well located near the middle of a calm, shallow lake is leaking oil onto the surface of the lake at the rate of 16 cubic feet per minute. Since oil and water don't mix, as the oil leaks onto the surface of the lake it spreads out into a uniform layer, called an oil slick, that floats on top of the water. The slick is circular, centered at the leak, and 0.02 ft thick. Find the rate at which the radius of the slick is increasing when the radius is 500 and 700 ft. Why would you expect the rates of change of the radii to be different, even though the oil is being added at a constant rate?
+        (<a href="https://www.ocf.berkeley.edu/~reinholz/ed/08sp_m160/lectures/derivatives_related_rates.tex">Source</a>)
+    </li>
+    <li>
+        A plane is flying at 500 mph at an altitude of 3 miles in a direction away
+        from where you're standing (i.e., the point on the ground directly beneath
+        the plane is moving away from you).  How fast is the plane's distance from
+        you increasing at the moment when the plane is flying over a point on the
+        ground 4 miles from you?  
+        (<a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Source</a>)
+    </li>
+    <li>
+        You are inflating a spherical balloon at the rate of seven cm³/sec.  How
+        fast is its radius increasing at the instant when the radius is four centimeters? 
+        How fast is the area increasing at the same time? 
+        (<a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Source</a>)
+    </li>
+    <li>
+        Water is poured into a conical container at the rate of \(10\) cm³/sec.
+        The cone points directly down (see side view at right), and it has a height
+        of \(30\) cm and a base radius of \(10\) cm.  How fast is the water level rising
+        when the water is \(4\) cm deep (at its deepest point)?
+        (<a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Source</a>)
+    </li>
+    <li>
+        A swing consists of a board at the end of a \(10\) ft long rope.  Think of the
+        board as a point \(P\) at the end of the rope, and let \(Q\) be the point of
+        attachment at the other end.  Suppose that the swing is directly below \(Q\)
+        at time \(t=0\) and is being pushed by someone who walks at the speed of \(6\)
+        ft/sec from left to right.  Find (a) how fast the swing is rising after \(1\)
+        sec; (b) the angular speed of the rope in deg/sec after \(1\) sec.
+        (<a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Source</a>)
+    </li>
+    <li>
+The ideal gas law \(pV = T\) relates pressure \(p\) and 
+volume \(V\) and temperature \(T\). Assume the temperature
+\(T = 50\) is fixed and \(\dot V=—5\). Find the rate \(\dot p\) with
+which the pressure increases when \(V = 10\) and \(p= 5\).
+        (<a href="https://people.math.harvard.edu/~knill/teaching/math1a_2014/handouts/35-relatedrates.pdf">Source</a>)
+    </li>
+    <li>
+There are cosmological models which see our universe
+as a four dimensional sphere which expands in space
+time. Assume the volume \(V = \frac 1 2 \pi^2 r^2\) increases at a
+rate \(\dot V = 100\pi^2r^2\), What is \(\dot r\)? 
+Evaluate it for \(r = 47\) (billion light years).
+        (<a href="https://people.math.harvard.edu/~knill/teaching/math1a_2014/handouts/35-relatedrates.pdf">Source</a>)
+    </li>
+</ol>
+
+<h2> Challenges </h2>
+<ol>
+    <li>
+Suppose that the minute hand of a clock is 15 mm long and the hour hand is
+12 mm. How fast is the distance between the hour hand and the minute hand
+changing at 2 pm?
+(<a href="https://math.berkeley.edu/~peyam/Math1AFa13/Handouts/Harder%20Optimization%20and%20Related%20Rates.pdf">Source</a>)
+    </li>
+    <li>
+A water tank has the shape of a horizontal cylinder with radius \(1\) and length \(2\).
+If water is being pumped into the tank at a rate of \(\frac 1 6\) m³ per minute, find the
+rate at which the water level is rising when the water is \(\frac 1 2\)  m deep.
+(<a href="https://math.berkeley.edu/~peyam/Math1AFa13/Handouts/Harder%20Optimization%20and%20Related%20Rates.pdf">Source</a>)
+    </li>
+</ol>
+
+</main>
+</body>
+
+</html>
+
