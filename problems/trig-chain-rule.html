@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Trigonometric Derivatives and the Chain Rule | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Trigonometric Derivatives <br> &amp; the Chain Rule</h1>
+</header>
+<main>
+
+<ol>
+    <li>
+        What is a formula for the derivative
+        of each of the following functions?
+        \[
+            f(t) = \sqrt{t^3}-\frac{1}{\pi}\tan(t)
+            \qquad
+            g(x) = x^5\sin(x)
+            \qquad
+            h(\theta) = \sec\left(\sqrt{7\theta}\right)
+        \]
+    </li>
+    <li>
+        What is an equation for the line 
+        tangent to the graph \(y = h(\theta)\)
+        of the function \( h(\theta) = \sec\left(\sqrt{7\theta}\right)\)
+        at the point \((2, h(2))\)?
+        Write down the constants accurate to five decimal places. 
+    </li>
+    <li>
+        What is the 307th derivative of sine?
+    </li>
+    <li>
+        What is a formula for the derivative
+        of each of the following functions?
+        \[
+            a(x) = \frac{\sin(x)}{x}
+            \qquad \qquad
+            b(x) = \frac{x}{\sin(x)}
+            \qquad \qquad
+            c(x) = \sin\!\left(\frac{1}{x}\right)
+        \]
+        \[
+            d(x) = \cos\!\left(x^{42}\right)
+            \qquad
+            f(x) = \cos^{42}(x)
+            \qquad 
+            g(x) = 42\cos^{42}\!\big(42x^{42}-42\big)+42
+        \]
+        \[
+            h(x) = \frac{\sec(x)}{\tan(x)}-\sin(x)
+            \qquad
+            j(x) = \frac{\tan(x)}{\sin(x)} - \csc(x)
+            \qquad
+            k(x) = \frac{\cos^2(x)}{\sin(x)}
+        \]
+        \[
+            \ell(x) = \tan(x)\sqrt{x}
+            \qquad \qquad
+            m(x) = \sqrt{\tan(x)}
+            \qquad \qquad
+            n(x) = \tan\left(\sqrt{x}\right)
+        \]
+        \[
+            \mathcal{o}(x) = \tan\!\big(\!\sin(x)\big)
+            \quad \quad
+            p(x) = \sec\!\big(\!\cot(x)\big)
+            \quad \quad
+            q(x) = \sin\!\big(\!\cos(\tan(x))\big)
+        \]
+        \[
+            \rho(x) = \frac{1}{x +2\csc(x)}
+            \quad \quad
+            \sigma(x) = \frac{x +2\csc(x)}{x}
+            \quad \quad
+            \tau(x) = \frac{x +2\csc(x)}{x -2\csc(x)}
+        \]
+        \[
+            \mu(x) = \frac{\sqrt[3]{x}}{\tan(x)}
+            \quad \quad \quad
+            \nu(x) = \frac{\tan(x)}{\sqrt[3]{x}}
+            \quad \quad \quad
+            \omega(x) = \sqrt[3]{\frac{\sec(x)}{x}}
+        \]
+        \[
+            \varsigma(x) = \sec\!\left(\tan(x^3)\right)
+            \quad
+            \zeta(x) = \sin\!\left(\sqrt{\cos(x)}\right)
+            \quad
+            \xi(x) = \cos\!\left(\frac{\cos(x)}{\cos(\cos(x)}\right)
+        \]
+    </li>
+    <li>
+        <p>
+        We denote the \(n^\text{th}\) derivative 
+        of a function \(f\) as \(f^{(n)}.\)
+        For example, \(f^{(13)}(x)\) is the thirteenth derivative of \(f,\)
+        and is better notation than \(f'''''''''''''(x)\) 
+        for the thirteenth derivative
+        </p>
+        <p>
+        Consider the function \(f(x) = \frac{1}{1-x}.\)
+        What is the first derivative of this function?
+        What is the fourth derivative of this function?
+        What is a formula for \(f^{(n)}(x)?\)
+        </p>
+    </li>
+    <li>
+        The quotient rule,
+        \[ \frac{\mathrm{d}}{\mathrm{d}x} \left(\frac{f}{g}\right) = \frac{f'g-fg'}{g^2} \]
+        is superfluous;
+        it’s simply a combination of the power rule, 
+        product rule, and chain rule.
+        Prove this by noticing that \(f/g = fg^{-1}\)
+        and taking the derivative of the latter.
+    </li>
+    <li>
+        <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
+        Given that \(F(x) = f\!\big(g(x)\big)\) 
+        and the following information, what is \(F'(1)\)?
+        \[ g(1) = 2 \;\;\;\; g'(1) = 3 \;\;\;\; f(1) = 5 \;\;\;\; f'(1) = 7 \;\;\;\; f(2) = 11 \;\;\;\; f'(2) = 13 \]
+    </li>
+    <li> 
+        Estimating, based on the graph, what are the values of the following?
+        <figure> <img width="648" src="img/limits.png"> </figure>
+        \[
+            f(-2)
+            \quad
+            f'(-2)
+            \quad
+            f''(-2)
+            \qquad
+            f(0)
+            \quad
+            f'(0)
+            \qquad
+            f(2)
+            \quad
+            f'(2)
+            \qquad
+            f(3)
+            \quad
+            f'(3)
+        \]
+        <!--
+        <br>
+        <br>
+        -->
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        So far we’ve been taking the fact that 
+        the derivative of sine is cosine as something we just know.
+        But this fact is not manifest. 
+        It follows from the definition of the derivative as a limit.
+        Use the definition of the derivative as a limit
+        to prove that the derivative of sine is cosine.
+        Hints: you’ll likely want to use these two facts in your proof:
+        \[
+            \sin(a+b) = \sin(a)\cos(b) + \cos(a)\sin(b)
+            \qquad\text{and}\qquad
+            \lim_{x \to 0} \frac{\cos(x)-1}{x} = 0
+        \]
+        The first of these is the sum-of-angles formula for sine
+        (do you remember how to prove that?),
+        and the second follows from \(\lim_{x \to 0}\frac{\sin(x)}{x} = 1.\)
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        Consider the function 
+        \[ f(x) = \sqrt{1- \sqrt{2- \sqrt{3-x } } }\,. \]
+        Determine the domain of \(f\), 
+        and calculate a formula for \(f'(x)\).
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        Calculate a formula for the \(n\)th derivative of \(f(x) = x^n/(1-x)\,.\)
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        Without appealing to technology, 
+        evaluate the limit
+        \[ \lim\limits_{x \to 0} \frac{\sin\big((3+x)^2\big) - \sin(9)}{x}\,. \]
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

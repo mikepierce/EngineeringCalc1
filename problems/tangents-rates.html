@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Secants, Tangents, and Rates | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Secants, Tangents, &amp; Rates</h1>
+</header>
+
+<main>
+<p>
+    Note that some of the prompts on this page 
+    don’t ask for an <em>exact</em> (true) answer,
+    but instead an <em>approximation</em>.
+    Try to keep your approximations accurate 
+    to within \(10^{-3}\) of the true answer.
+</p>
+<ol>
+    <li>
+        A person wearing a pedometer tracks the number 
+        of steps they’ve taken today.
+        <figure>
+            <!--
+        <table>
+        <thead>
+            <tr> <th>Time</th> <th>Steps</th> </tr>
+        </thead>
+        <tbody>
+            <tr> <td>6am</td> <td>0</td> </tr>
+            <tr> <td>8am</td> <td>531</td> </tr>
+            <tr> <td>10am</td> <td>3441</td> </tr>
+            <tr> <td>Noon</td> <td>5590</td> </tr>
+            <tr> <td>3pm</td> <td>6013</td> </tr>
+            <tr> <td>5pm</td> <td>6778</td> </tr>
+            <tr> <td>8pm</td> <td>11340</td> </tr>
+            <tr> <td>10pm</td> <td>12019</td> </tr>
+        </tbody>
+        </table>
+            -->
+        <table>
+        <tbody>
+            <tr> 
+                <th>Time</th> 
+                <td>6am</td>  
+                <td>8am</td>  
+                <td>10am</td> 
+                <td>Noon</td> 
+                <td>3pm</td>  
+                <td>5pm</td>  
+                <td>8pm</td>  
+                <td>10pm</td> 
+            </tr>
+            <tr> 
+                <th>Steps</th> 
+                <td>0</td> 
+                <td>531</td>
+                <td>3441</td>
+                <td>5590</td>
+                <td>6013</td>
+                <td>6778</td>
+                <td>11340</td>
+                <td>12019</td>
+            </tr>
+        </tbody>
+        </table>
+        </figure>
+        First, briskly sketch a plot of this data
+        with your independent variable \(x\) 
+        measured in hours since 6am.
+        <ol>
+            <li>
+                On average, how many steps per hour
+                did the person take today?
+            </li>
+            <li>
+                On average, how many steps per hour
+                did the person take in the morning?
+                On average, how many steps per hour
+                did the person take in the afternoon?
+            </li>
+            <li>
+                In your plot, what is the slope 
+                of the secant line between the points
+                corresponding to 8am and 3pm?
+                What is the meaning of this slope in context?
+            </li>
+            <li>
+                If this person asked you to look at this data
+                and to determine you how fast they were walking (steps/hr)
+                at <em>exactly</em> 5pm, how would you estimate this?
+                Note: we can’t <em>know</em> this only from this data,
+                so your task is only to make an informed estimation.
+            </li>
+        </ol>
+    </li>
+    <li>
+        A particle moves back and forth along a straight line.
+        After designating a point along its path as the origin,
+        you begin observing the particle at time \(t=0\) and surmise
+        that the distance, in miles, the particle is from the origin 
+        is given by the function
+        \[f(t) = \cos\left(t^2-3t+1\right) \,.\]
+        Note: the cosine function expects an argument in radian measure.
+        <ol>
+            <li>
+                Approximately, 
+                what is the average velocity of the particle
+                between \(t=0\) and \(t=1?\)
+                What about between \(t=0\) and \(t=0.5?\)
+                What about between \(t=0\) and \(t=0.1?\)
+                What about between \(t=0\) and \(t=0.01?\)
+            </li>
+            <li>
+                Continue what you were doing in the previous part
+                to approximate the speed of the particle
+                the moment you began observing it.
+            </li>
+        </ol>
+    </li>
+    <li>
+        Approximately what is the slope of the line 
+        tangent to the curve \(y = \sqrt{x}\tan(x)\) at \(x=3\)?
+    </li>
+    <li>
+        A child on the roof of the Empire State Building 
+        hurls a penny towards the city streets below. 
+        The height of the penny after \(t\) seconds,
+        willfully ignoring air resistance,
+        can be fairly accurately modelled by the function
+        \[f(t) = 1250 - 42t - 5t^2\,.\]
+        <ol>
+            <li>
+                According to this model, 
+                approximately how long before the penny hits the ground?
+            </li>
+            <li>
+                According to this model, 
+                approximately what is the speed of the penny 
+                when it hits the ground?
+            </li>
+        </ol>
+    </li>
+    <li>
+        Suppose we have a model for how far \(d\) 
+        a dragster has travelled from the starting line 
+        for any time \(t\) between zero and ten seconds 
+        after it started a pass, and that model for the distance 
+        is given by a function \(f\) of time as
+        \[ d \;=\; f(t) = t^3 + 32t\,. \]
+        <ol>
+            <li>
+                Approximately how fast was the dragster going 
+                at the \(t=10\) seconds mark, 
+                the moment it crossed the finish line?
+            </li>
+            <li class="hard">
+                The average velocity of the dragster 
+                for the entire pass was 132ft/s.
+                Conceivably, since the dragster starts out at 0ft/s
+                and ends the pass going much faster than 132ft/s,
+                at some time <em>during</em> the pass
+                it was going exactly 132ft/s.
+                Can you estimate at what time during the pass
+                the dragster’s velocity was 132ft/s?
+            </li>
+        </ol>
+    </li>
+    <li> 
+        What’s an equation for the line 
+        tangent to the graph \(y= f(x)\)
+        of the function \(f(x) = \sqrt{3x^2-8}+2\)
+        at the point \((2,f(2))?\)
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

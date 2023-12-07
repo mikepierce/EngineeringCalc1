@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Chebyshev Polynomials</title>
+    <meta name="author" content="Mike Pierce">
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>@media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:1.6em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Chebyshev Polynomials</h1>
+</header>
+
+<main>
+<aside>
+    Adapted from 
+    a sequence of questions from 
+    <a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf"><cite>Challenge Problems</cite> written by Stewart</a>,
+    posted publicly on his website
+    as a supplement to his Calculus textbook.
+</aside>
+<p>
+    The <em>Chebyshev polynomials</em> \(T_n\) are defined by
+    \[ T_n(x) = \cos\big(n \arccos(x)\big)\quad n=0,1,2,3,\dotsc \,.\]
+</p>
+<ol>
+    <li>
+        What are the domain and range of these functions?
+    </li>
+    <li>
+        We know that \(T_0(x) = 1\) and \(T_1(x) = x.\) 
+        Express \(T_2\) explicitly as a quadratic polynomial 
+        and \(T_3\) as a cubic polynomial.
+    </li>
+    <li>
+        Show that, for \(n \gt 1\),
+        \[T_{n+1}(x) = 2xT_n(x) - T_{n-1}(x)\,.\]
+    </li>
+    <li>
+        Use the previous parts to show that \(T_n\) 
+        is a polynomial of degree \(n\).
+    </li>
+    <li>
+        Use the previous parts to express
+        \(T_4,\) \(T_5,\) \(T_6,\) and \(T_7\) explicitly as polynomials.
+    </li>
+    <li>
+        What are the zeros of \(T_n?\) 
+        At what numbers does \(T_n\) have local maximum and minimum values?
+    </li>
+    <li>
+        Graph \(T_2,\) \(T_3,\) … \(T_7\) on a common screen.
+        How do the zeros of \(T_n\) relate to the zeros of \(T_{n+1}?\)
+        How do the \(x\)-coordinates of the minimums/maximums of \(T_n\) 
+        relate to the minimums/maximums of \(T_{n+1}?\)
+    </li>
+    <li>
+        Based on the graphs, what can you say about 
+        \(\int_{-1}^1 T_n(x)\,\mathrm{d}x\)
+        when \(n\) is odd and when \(n\) is even?
+    </li>
+    <li>
+        Use the substitution \(u = \arccos(x)\) 
+        to evaluate the integral in the previous part.
+    </li>
+    <li>
+        The family of functions \(f(x) = \cos\big(c \arccos(x)\big)\) 
+        are defined even when \(c\) is not an integer 
+        (but then \(f\) is not a polynomial). 
+        Describe how the graph of \(f\) changes as \(c\) increases.
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

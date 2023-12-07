@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Motivating Integral Calculus | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<main>
+<br> <br> <br> <br> <br> <br> <br>
+<ol>
+    <li>
+        Suppose a Maserati
+        is speeding down a straight highway in Nevada.
+        For a twelve second window of time it has a constant speed 
+        of \(220\text{ ft/s}\) (\(\approx 147\text{ mph}\)).
+        How far does the car travel in those twelve seconds?
+        <br> <br> <br> <br> <br> <br> <br>
+    </li>
+    <li>
+        Suppose a Maserati 
+        is speeding down a straight highway in Nevada.
+        For a twelve second window of time it has an <s>constant</s> <em>average</em> speed 
+        of \(220\text{ ft/s}\) (\(\approx 147\text{ mph}\)).
+        How far does the car travel in those twelve seconds?
+        <br> <br> <br> <br> <br> <br> <br>
+    </li>
+    <li>
+        Suppose I’m standing on the side of a Nevada freeway
+        with a radar gun in hand.
+        A Maserati is cruising towards me. 
+        I point my radar gun towards the car to measure its speed and,
+        noticing this, the driver of the Maserati floors it.
+        The car speeds past me and disappears into the distance,
+        the radar gun losing track of the car exactly twelve seconds 
+        after I first pointed it towards them.
+        When I started recording the car’s speed
+        the radar gun read \(120\text{ ft/s}\) (\(\approx 80\text{ mph}\)),
+        and when when car sped out of range twelve seconds later
+        the radar gun read \(264\text{ ft/s}\) (\(\approx 176\text{ mph}\)).
+        Approximately how far did the car travel in those twelve seconds?
+        <br> <br> <br> <br> <br> <br> <br>
+    </li>
+    <li>
+        Suppose I looked at the radar gun 
+        exactly \(6\) seconds after pointing it towards the Maserati,
+        and saw that it reported a speed of \(174\text{ ft/s}.\)
+        Can we use this information to get a better approximation
+        for how far the car travelled in those twelve seconds?
+        <br> <br> <br> <br> <br> <br> <br>
+    </li>
+    <li>
+        Furthermore, what if we know the radar gun reported 
+        it was going \(135.75\text{ ft/s}\) after three seconds
+        and \(221.25\text{ ft/s}\) after nine seconds?
+        Can we use this information to get an even better approximation
+        for how far the car travelled in those twelve seconds?
+        <br> <br> <br> <br> <br> <br> <br>
+    </li>
+    <li>
+        What if we could know the speed of the car 
+        at <em>any</em> moment during those twelve seconds?
+        Suppose my radar gun, being quite technologically advanced,
+        used the data it collected on the speed of the car
+        and worked out a model \(f(t)\) for the car’s speed \(v\)
+        at any time \(t\) during those twelves seconds:
+        \[ v \;=\; f(t) = 120 + 2t^2 - \frac{1}{12}t^3\,. \]
+        How far did the car travel in those twelve seconds?
+        <br> <br> <br> <br> <br> <br> <br>
+    </li>
+</ol>
+
+<h3>The Full Prompt</h3>
+<p>
+    Suppose I’m standing on the side of a Nevada freeway
+    with a radar gun in hand.
+    A Maserati is cruising towards me. 
+    I point my radar gun towards the car to measure its speed and,
+    noticing this, the driver of the Maserati floors it.
+    The car speeds past me and disappears into the distance,
+    the radar gun losing track of the car exactly twelve seconds 
+    after I first pointed it towards them.
+    My radar gun, being quite technologically advanced,
+    used the data it collected on the speed of the car
+    and worked out a model \(f(t)\) for the car’s speed \(v\)
+    at any time \(t\) during those twelves seconds:
+    \[ v \;=\; f(t) = 120 + 2t^2 - \frac{1}{12}t^3\,. \]
+    How far did the car travel in those twelve seconds?
+</p>
+</main>
+</body>
+
+</html>
+

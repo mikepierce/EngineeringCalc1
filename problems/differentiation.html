@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Differentiation Basics | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Differentiation Basics</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        A drag race, commonly called a <em>pass</em>, 
+        is run on a \(1320\) ft (¼ mile) long track. 
+        Suppose we have a model for how far \(d\) the dragster has travelled
+        from the starting line for any time \(t\) after it started the pass
+        until \({t=10}\) seconds when it crossed the finish line,
+        and that model for the distance is given by a function \(f\) of time as
+        \[ d \;=\; f(t) = t^3 + 32t\,. \]
+        How fast was the dragster going <em>exactly</em>
+        five seconds into the pass?
+    </li>
+    <li>
+        What is a formula for the derivative
+        of each of the following functions?
+        \[
+        f(t) = -3t^3 -2t^2 + t^{\pi^2} - \frac{1}{3t^6} - 4.5
+        \qquad
+        g(x) = \sqrt{x}+\sqrt[3]{x}+\sqrt[3]{x^2}
+        \]
+    </li>
+    <li>
+        What are the values of \(\ell'(1)\) and \(\ell''(3)\),
+        accurate to five decimal places,
+        for the function \(\ell\) defined as follows?
+        \[\ell(\omega) = 3.11\omega^{5.809}-17\omega^{-0.1}\]
+    </li>
+    <li>
+        Take the derivative of the following function two different ways: 
+        first by using the product rule straight-away,
+        then again by multiplying the factors before you take the derivative.
+        Verify that the results are equivalent.
+        \[f(x) = \left(x^2-7x\right)\!(4x-5)\]
+    </li>
+    <!--
+    <li>
+        Demonstrate how to calculate the derivative
+        of this function two ways:
+        once by directly using the quotient rule,
+        and again by rewriting the expression first
+        to avoid using the quotient rule entirely.
+        \[h(t) = \frac{\sqrt{t}-2t}{t^3}\]
+    </li>
+    -->
+    <li>
+        Take the derivative of the following function two different ways: 
+        first by using the quotient rule straight-away,
+        then again by first doing polynomial long division before you take the derivative.
+        Verify that the results are equivalent.
+        \[g(x) = \frac{2x^3-17x^2+23x-8}{2x-3}\]
+    </li>
+    <li>
+        What is an equation for the line tangent to the curve
+        \(y = \frac{1}{2}x^2-3\) at the point where \(x = 2?\)
+    </li>
+    <li>
+        The curve defined by the equation
+        \(y = \frac{1}{x^2+1}\) 
+        is often called the <em>witch of Agnesi</em>.
+        What is an equation for the line tangent to this curve
+        at the point where \(x = 1?\)
+    </li>
+    <li>
+        At what point(s) does the line tangent to the curve
+        \(y = \sqrt{x}\) have a slope of \(18?\)
+    </li>
+    <li>
+        At what point(s) on the curve
+        \(y = x^3 - 6x^2 -63x +99\)
+        will the tangent line be perfectly horizontal?
+    </li>
+    <li>
+        The function \(A\) with formula \( A(r) = \pi r^2\)
+        returns the area of a circle given its radius.
+        What is a formula for the derivative 
+        \(\frac{\mathrm{d}A}{\mathrm{d}r}?\)
+        This formula should look familiar.
+        Is there a reason for this,
+        or is it just a coincidence?
+    </li>
+    <li>
+        The function \(V\) with formula \( V(r) = \frac{4}{3}\pi r^3\)
+        returns the volume of a sphere given its radius.
+        What is a formula for the derivative
+        \(\frac{\mathrm{d}V}{\mathrm{d}r}?\)
+        Based on the familiar formula for \(A'\)
+        that appeared in the previous question,
+        speculate what \(V'\) could be a formula for.
+        Do some quick research: is your speculation correct?
+    </li>
+    <li>
+        What is the value of this limit?
+        \[\displaystyle \lim_{h \to 0}\frac{(3+h)^{17}-3^{17}}{h}\]
+    </li>
+    <li>
+        You know the product rule \((fg)' = f'g + fg'\),
+        but what about the derivative of 
+        the product of <em>three</em> functions?
+        Considering the products “two at a time”
+        find a formula for the derivative \((fgh)'\)
+        for functions \(f,\) \(g,\) and \(h\).
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        Consider the piecewise-defined function:
+        \[
+            j(x) = \begin{cases}
+            2x^2-1 &\text{ for } x\lt1\\
+            ax+b &\text{ for } x\geq 1
+        \end{cases}\]
+        Find the unique pair of values \(a\) and \(b\)
+        for which \(j\) is a differentiable function.
+    </li>
+    <li>
+        You’ve been asked a few times now to
+        <em>find an equation of the line tangent to a curve at a point.</em>
+        Let’s formula-ize this task.
+        Given a general function \(f(x)\),
+        what’s an equation for the tangent line to the graph
+        \(y = f(x)\) at the point \((c,f(c))?\)
+    </li>
+    <li>
+        <p>
+        Consider the <em>hyperbola</em> 
+        defined by the formula \(y = \frac{1}{x}\) for \(x \gt 0\).
+        Let \(P\) be a point on the hyperbola,
+        and let \(\ell\) be the line segment 
+        tangent to the hyperbola at \(P\)
+        with endpoint on the \(x\)- and \(y\)-axis respectively.
+        </p>
+        <figure> <img width="216" src="img/hyperbola-tangent.png"> </figure>
+        <ol>
+            <li>
+                Show that, regardless of its location on the hyperbola,
+                the point \(P\) will be the midpoint of \(\ell.\)
+            </li>
+            <li>
+                Show that the area of the triangle that \(\ell\)
+                cuts off in the first quadrant
+                is invariant per choice of \(P.\)
+                I.e. the area doesn’t change if you move \(P.\)
+            </li>
+        </ol>
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        Find two points on the curve 
+        defined by the equation \(y = x^4 - 2x^2 - x\)
+        that have a common tangent line.
+    </li>
+    <li>
+        What’s a formula for the \(n\)<sup>th</th> derivative of tangent?
+        What about secant?
+    </li>
+    <li class="hard">
+        <p>
+        We’ve been taking the <em>power rule</em>,
+        the theorem that gives us the formula
+        \[\frac{\mathrm{d}}{\mathrm{d}x} x^n = nx^{n-1}\]
+        for all integers \(n\), as a fact.
+        But this fact is not manifest. 
+        It follows from the definition of the derivative as a limit.
+        Use the definition of the derivative 
+        to prove that the power rule is true.
+        Hint: you may need to familiarize yourself 
+        with the <em>binomial theorem</em> to prove this.
+        </p>
+        <p>
+        Does the proof you wrote work 
+        if \(n\) is a rational number?
+        What if \(n\) is an irrational number?
+        </p>
+    </li>
+    <li class="hard screen">
+        Similarly, the <em>product rule</em>
+        \[ \frac{\mathrm{d}}{\mathrm{d}x} (fg) = f'g+fg' \]
+        is not simply manifest.
+        Use the definition of the derivative 
+        to prove the product rule for taking derivatives.
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

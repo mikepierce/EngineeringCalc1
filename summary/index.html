@@ -55,22 +55,21 @@
     <li>
         <!-- SLO: Interpret concepts of calculus including limits, derivatives, and integrals -->
         <h4>Concept</h4>
-        <p>
         Understand what the notation
-        \( \lim\limits_{x \to x_0} f(x) \) means,
-        and what it means if there’s a superscript \(+\) or \(-\) on that \(x_0\).
-        </p>
+        \( \lim_{x \to x_0} f(x) \) means,
+        what the notation
+        \( \lim_{x \to x_0^+} f(x) \) 
+        and \( \lim_{x \to x_0^-} f(x) \) means,
+        and what it means if \(x_0\) is replaced by \(\pm\infty.\)
     </li>
     <li>
         <!-- SLO: Determine limits of functions graphically, numerically, and algebraically -->
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Skill</h4>
-        <p>
         Be able to compute
-        \( \lim\limits_{x \to x_0} f(x) \),
+        \( \lim_{x \to x_0} f(x) \),
         either numerically or precisely,
         given either a formulaic or graphical presentation of a function.
-        </p>
     </li>
 </ul>
 <p>
@@ -87,27 +86,29 @@
     The other of minor character
     is the concept of <em>continuity</em> of a function.
     Explicitly we’ll say a function \(f\) in continuous at a point \(x_0\)
-    if \(f(x_0) = \lim\limits_{x \to x_0} f(x) \),
-    but it more important to understand what continuity means conceptually.
+    if \(f(x_0) = \lim_{x \to x_0} f(x) \),
+    and continuous on a domain if it’s continuous 
+    at all point in that domain.
+    It’s more important though 
+    to understand what continuity means conceptually.
 </p>
 <ul>
     <li>
         <!-- SLO: Interpret concepts of calculus including limits, derivatives, and integrals -->
         <h4>Concept</h4>
-        <p>
         Understand what it means for a function
         to be continuous at a point and continuous on some domain,
         and why many natural phenomenon morally
         <em>should</em> be modelled a continuous function.
-        </p>
     </li>
 </ul>
 <p>
-    We can only apply the techniques of calculus,
-    define the derivative and integral of a function 
+    We can only apply the techniques of calculus
+    and define the derivative and definite integral of a function 
     on some domain as a formula,
-    if we take the hypothesis that the function 
-    is continuous on that domain.
+    if we take as an hypothesis that the function 
+    is continuous on that domain;
+    continuity is a crucial hypothesis moving forward.
 </p>
 </section>
 
@@ -124,7 +125,6 @@
         <!-- SLO: Interpret concepts of calculus including limits, derivatives, and integrals -->
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Concept</h4>
-        <p>
         Know and understand the definition of the derivative of 
         a real-valued function, 
         \[
@@ -132,34 +132,33 @@
         = \lim\limits_{h \to 0} \frac{f(x+h) - f(x)}{h}\,,
         \]
         and how you can think of this derivative 
-        as a rate of change of the function output 
-        relative to the function input, 
+        as a rate of change of the function’s output 
+        relative to the function’s input, 
         <em>or</em> how you can think of it geometrically 
-        as a slope of a tangent line.
-        </p>
+        as a slope of a tangent line 
+        to the graph \(y = f(x)\) of the function.
     </li>
     <li>
         <!-- SLO: Calculate derivatives by a variety of techniques -->
         <h4>Skill</h4>
-        <p>
         Be able to write a formula for the derivative of any function 
         expressed in terms of rational functions, trigonometric functions, 
         or power functions (e.g. square roots, etc).  
-        </p>
     </li>
 </ul>
 <p>
     The former of these is a concept you must internalize 
     as you work through exercises, reading examples, 
     and generally reading about calculus. 
-    (You do read, right? If not the textbook, then any helpful notes or pages online.)
-    The latter is a skill you can practice until you feel proficient, and luckily 
-    <a title="Google Image search of derivative exercises" href="https://www.google.com/search?tbm=isch&q=derivative%20exercises&tbs=imgo:1">such exercises are plentiful online</a>. 
-    Sometimes those exercises are accompanied by solutions, but if they’re not
-    <a href="https://www.wolframalpha.com/calculators/derivative-calculator/">Wolfram|Alpha can compute derivatives for you</a>.
+    The latter is a skill you can practice until you feel proficient, 
+    and luckily such exercises are plentiful online.
+    Sometimes those exercises are accompanied by solutions, 
+    but if they’re not a symbolic computer algebra system (CAS)
+    can calculate the derivative of a function defined by a formula.
+    For example, <a title="Wolfram|Alpha" href="https://www.wolframalpha.com/calculators/derivative-calculator/">Wolfram|Alpha can calculate derivatives</a>.
     A word of caution though: 
     the expectation is that <em>you</em> can compute derivatives. 
-    Let Wolfram|Alpha be your aid, not your crutch—hopefully 
+    Only let a computer be your aid, not your crutch—hopefully 
     similar to the relationship you have with your calculator.
 </p>
 <p>
@@ -175,12 +174,10 @@
     <li>
         <!-- SLO: Calculate derivatives by a variety of techniques -->
         <h4>Skill</h4>
-        <p>
         Be able to <em>implicitly differentiate</em> any equation 
         involving rational expressions, trigonometric expressions, 
         or power terms (e.g. square roots, etc)
         with respect to any variable in that equation.
-        </p>
     </li>
 </ul>
 <p>
@@ -195,13 +192,12 @@
     given our new knowledge of derivatives.
     This isn’t an important “skill” we’re learning though.
     The purpose of doing this is to buff your 
-    understanding of the concept of a derivative,
+    understanding of the geometric concept of a derivative,
     and give you a visual perspective on the relationship
     between a function and its derivative.
 </p>
 <p>
-    Beyond this, there are three important 
-    uses of differentiation we’ll talk about.
+    There are three important uses of differentiation we’ll talk about.
 </p>
 <ul>
     <li>
@@ -233,7 +229,7 @@
 <p>
     The first of these will require you 
     to be adept at implicit differentiation.
-    The second will simply be an extension of a skill that (I hope!) 
+    The second will simply be an extension of a skill that
     you’ve already practiced before in math class.
     Both of these will require that you be comfortable
     synthesizing mathematical equations and relationships
@@ -243,17 +239,18 @@
     to your search phrases though.
 </p>
 <p>
-    There is one last numerical/computational application
-    of differentiation we’ll discuss.
+    There is one last, rather fundamental, 
+    numerical/computational application of differentiation we’ll discuss.
 </p>
 <ul>
     <li>
         <!-- SLO: Use differentiation and integration to solve application problems -->
         <h4>Application</h4>
         <p>
-        Perform
-        <a title="Paul’s Online Notes: Newton’s Method" href="https://tutorial.math.lamar.edu/classes/calci/newtonsmethod.aspx">Newton’s method</a> 
-        manually, and understand that lines are very useful.
+        Perform <a title="Paul’s Online Notes: Newton’s Method" href="https://tutorial.math.lamar.edu/classes/calci/newtonsmethod.aspx">Newton’s method</a> 
+        to numerically approximate the solution to an equation,
+        and understand generally how lines 
+        can be used to approximate curves.
         </p>
     </li>
 </ul>
@@ -266,8 +263,8 @@
     you might as well implement it now.
 </p>
 <p>
-    In the next segment of class we’ll explore 
-    differentiation’s dual operation: integration.
+    In the next segment of this class 
+    we’ll begin to explore differentiation’s dual operation: integration.
 </p>
 </section>
 
@@ -286,7 +283,6 @@ and how it relates to differentiation.
         <!-- SLO: Interpret concepts of calculus including limits, derivatives, and integrals -->
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Concept</h4>
-        <p>
         Understand that the definite integral 
         \(\int_a^b f(t) \;\mathrm{d}t\) 
         has a “physical” interpretation 
@@ -299,13 +295,25 @@ and how it relates to differentiation.
         between \(a\) and \(b\).
         Furthermore understand what the function
         \(\int_0^t f\) represents.
-        </p>
     </li>
     <li>
         <!-- SLO: Interpret concepts of calculus including limits, derivatives, and integrals -->
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Concept</h4>
-        <p>
+        Understand that a definite integral is defined 
+        as the limit of a <em>Riemann sum</em> 
+        as the number of summands approaches infinity.
+        E.g.
+        \[
+            \int\limits_a^b f(x) \,\mathrm{d}x
+            \;\;=\;\;
+            \lim\limits_{n \to \infty} \frac{1}{n} \sum_{i=0}^{n} f\!\left(a + \frac{b-a}{n}i\right)
+        \]
+    </li>
+    <li>
+        <!-- SLO: Interpret concepts of calculus including limits, derivatives, and integrals -->
+        <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
+        <h4>Concept</h4>
         Have a <em>working</em> understanding of 
         the fundamental theorem of calculus,
         knowing abstractly that differentiation 
@@ -318,7 +326,6 @@ and how it relates to differentiation.
             \int\limits_a^b \ddt f(t) \;\mathrm{d}t = f(b) - f(a)
             \,.
         \]
-        </p>
     </li>
 </ul>
 <p>
@@ -336,12 +343,10 @@ and how it relates to differentiation.
         <!-- SLO: Apply the Fundamental Theorem of Calculus to evaluate definite integrals -->
         <!-- SLO: Use basic techniques of integration to find antiderivatives -->
         <h4>Skill</h4>
-        <p>
         Be able to compute an <em>antiderivative</em> of a function.
         I.e. given a formula for a function’s derivative
         \(\frac{\mathrm{d}}{\mathrm{d}t}f\),
         figure out a formula for \(f\).
-        </p>
     </li>
 </ul>
 <p>
@@ -352,8 +357,8 @@ and how it relates to differentiation.
     You will not master this skill in this class,
     but you’ll learn a few basic tools,
     and get some practice channeling that creativity.
-    In <a href="../../136">the next course</a>
-    you’ll learn more tools and further hone this skill.
+    In <a href="https://org.coloradomesa.edu/~mapierce2/136/">the next course</a>
+    you’ll learn to further hone this skill.
 </p>
 <p>
     The first of these basic tools is simply <em>pattern recognition</em>.
@@ -384,30 +389,24 @@ and how it relates to differentiation.
         <!-- SLO: Use differentiation and integration to solve application problems -->
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Application</h4>
-        <p>
         Be able to compute the area of any region in the coordinate plane
-        bounded by the graphs of functions.
-        </p>
+        bound by piece-wise differentiable curves.
     </li>
     <li>
         <!-- SLO: Use differentiation and integration to solve application problems -->
         <h4>Application</h4>
-        <p>
         Know that the volume of a
         <a title="Wikipedia: Solid of Revolution" href="https://en.wikipedia.org/wiki/Solid_of_revolution">solid of revolution</a>
         can be thought of as the accumulation of areas of cross-sections
         along either an axis or a radius,
         and be able to compute this volume as an integral.
-        </p>
     </li>
     <li>
         <!-- SLO: Use differentiation and integration to solve application problems -->
         <h4>Application</h4>
-        <p>
-        Know that <em>work</em> is the accumulation of <em>force</em> applied 
-        over the <em>displacement</em> of some mass,
-        and be able to compute this work as an integral.
-        </p>
+        Compute <em>work</em>, the accumulation of <em>force</em> applied 
+        over the <em>displacement</em> of some mass. I.e.
+        \[ \text{Work} = \int\limits_a^b \text{Force} \,\mathrm{d}x\,. \]
     </li>
 </ul>
 <p>
@@ -422,13 +421,13 @@ and how it relates to differentiation.
 <p>
     And that’s it! 
     That’s the beginning of the story of calculus.
-    In the sequel to this class we’ll dive deeper
-    into techniques of evaluating integrals,
-    get lost in the mysteries of \(\infty\) 
-    learning to find the limits of sequences and evaluate series,
-    and culminate the single-variable calculus adventure
-    by learning 
-    <a title="Wikipedia: Taylors Theorem" href="https://en.wikipedia.org/wiki/Taylor's_theorem">Taylor’s theorem</a>.
+    In the sequel to this class we’ll 
+    discuss the calculus of exponential and logarithmic functions,
+    dive deeper into techniques of evaluating indefinite integrals,
+    learning to calculate the sum of infinitely many numbers,
+    and finally we’ll culminate the story of single-variable calculus
+    by learning that 
+    <a title="Wikipedia: Taylors Theorem" href="https://en.wikipedia.org/wiki/Taylor's_theorem">every infinitely differentiable function can be considered as the limit of a sequence of polynomial functions</a>.
 </p>
 </section>
 </main>

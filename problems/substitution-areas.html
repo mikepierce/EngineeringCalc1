@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Integration by Subsitution and Areas Between Curves | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Integration by Substitution <br> &amp; Areas Between Curves</h1>
+</header>
+<main>
+<ol>
+    <li>
+        Evaluate as many of these indefinite integrals
+        as you need to feel confident with 
+        the technique of substitution (change of coordinates).
+        Aim to be not just familiar, but adept at this skill.
+        Don’t forget your \(+C\)s!
+        <figure>
+            <div> \(\displaystyle\int \sqrt{3x-7} \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int \frac 1 2 \sec^2(3x-7) \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int \frac{\mathrm{d}x}{(3x-7)^2} \) </div>
+            <div> \(\displaystyle\int \cos(7x) \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int x\cos\!\big(7x^2\big) \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int x^3\cos\!\left(7x^4\right) \,\mathrm{d}x\) </div>
+            <!-- <div> \(\displaystyle\int x^3\left(x^2+1\right)^9 \,\mathrm{d}x\) </div> -->
+            <div> \(\displaystyle\int \cos(x)\cos\!\left(\sin(x)\right) \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int \sin(x)\cos^{9}(x) \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int x\sqrt{3x-7} \,\mathrm{d}x\) </div>
+            <!-- <div> \(\displaystyle\int x\sec^2\left( 3x^2-9 \right) \,\mathrm{d}x\) </div> -->
+            <div> \(\displaystyle\int \frac{1+\cot^2(x)}{(1+\cot(x))^2} \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int \frac{\sin\left(\frac{1}{x^2}\right)}{x} \,\mathrm{d}x\) </div>
+            <!-- <div> \(\displaystyle\int \tan\left(\pi x-1\right)\sec\left(\pi x-1\right) \,\mathrm{d}x\) </div> -->
+            <div> \(\displaystyle\int \sqrt{\tan(x)\sec^4(x)} \,\mathrm{d}x\) </div>
+        </figure>
+    </li>
+    <li>
+        Evaluate these definite integrals.
+        <figure>
+            <div> \(\displaystyle\int\limits_{1}^{3} \frac{\mathrm{d}x}{(3x-7)^2} \) </div>
+            <div> \(\displaystyle\int\limits_{0}^{\sqrt{\pi/42}} x\cos\!\big(7x^2\big) \,\mathrm{d}x\) </div>
+            <div> \(\displaystyle\int\limits_{0}^{1} x^3\left(x^2+1\right)^9 \,\mathrm{d}x\) </div>
+        </figure>
+    </li>
+    <li>
+        Calculate the area of the region in the \(x,y\)-plane 
+        enclosed between the curves given by the equations 
+        \(y=x^2\) and \(y=x+6.\)
+    </li>
+    <!--
+    <li>
+        Calculate the area of the region
+        enclosed between the curves
+        \(y=x^2\) and \(y=2-x^2.\)
+    </li>
+    -->
+    <li>
+        What’s the area of a single “hump”
+        under the graph of sine?
+    </li>
+    <li>
+        Consider the region enclosed by the curves 
+        \(y=x^2\) and \(y=x^3.\)
+        Write two different integrals,
+        one with respect to \(x\) and the other with respect to \(y,\)
+        that represent the area of this region,
+        then calculate the values of each of these integrals
+        to verify they have the same value.
+    </li>
+    <li>
+        What’s the area of the triangle in the \(x,y\)-plane 
+        with vertices located at coordinates 
+        \((1,1),\) \((7,2),\) and \((5,8)?\)
+    </li>
+    <li>
+        Calculate the area of the region in the \(x,y\)-plane 
+        enclosed between the curves given by the equations 
+        \(y=\sqrt{x}\) and \(y=6-x\) and \(y=0.\)
+        Protip: integrate with respect to \(y\)
+        so you can set it up as a single integral.
+    </li>
+    <li>
+        Calculate the area of the region in the \(x,y\)-plane 
+        enclosed between the curves given by the equations 
+        \(y=\sec^2(x)\) and \(y=8\cos(x).\)
+    </li>
+    <li>
+        The curves \(y=\sin(x)\) and \(y=\cos(x)\)
+        enclose a region consisting of 
+        infinitely many repeating copies of a single shape.
+        What’s the area of this shape?
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        There is a line through the origin that divides the region 
+        bounded by the parabola \(y=x-x^2\) and the \(x\)-axis 
+        into two regions with equal area. 
+        What is the slope of that line?
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        Prove that if \(f\) is continuous, then
+        \[
+            \int\limits_0^x f(u)(x-u)\,\mathrm{d}u
+            \;\;=\;\;
+            \int\limits_0^x \left(\int\limits_0^u f(t)\,\mathrm{d}t\right)\,\mathrm{d}u
+        \]
+        How can we interpret this equation geometrically?
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        If the tangent at a point \(P\) on the curve \(y = x^3\)
+        intersects the curve again at \(Q\), let \(A\) be the
+        area of the region bounded by the curve and the line segment \(PQ\). 
+        Let \(B\) be the area of the region
+        defined in the same way starting with \(Q\) instead of \(P\). 
+        What is the relationship between \(A\) and \(B\)?
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        The figure shows three curves, \(y=x^2,\) \(y=2x^2,\) and \(C,\)
+        such that for every point \(P\) on the middle curve \(y = 2x^2\),
+        the shaded areas are equal. Find an equation for \(C\).
+        <figure> <img width="324" src="img/curve-equal-areas.png"> </figure>
+    </li>
+    <!--
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        A rocket is fired straight up, 
+        burning fuel at the constant rate of \(b\) kilograms per second. 
+        Let \(v = v(t)\) be the velocity of the rocket at time \(c\) 
+        and suppose that the velocity \(u\) of the exhaust gas is constant. 
+        Let \(M = M(t)\) be the mass of the rocket at time \(t\) 
+        and note that \(M\) decreases as the fuel burns. 
+        If we neglect air resistance, 
+        it follows from Newton’s Second Law that
+        \[ F = M\frac{\mathrm{d}v}{\mathrm{d}t} - ub \]
+        where the force \(F = -Mg\). Thus
+        \( M\frac{\mathrm{d}v}{\mathrm{d}t} - ub = -Mg\,.\)
+        Let \(M_1\) be the mass of the rocket without fuel, 
+        \(M_2\) the initial mass of the fuel, and \(M_0 = M_1 + M_2\).
+        Then, until the fuel runs out at time \(t = M_2b\), 
+        the mass is \(M = M_0 - bt\).
+        <ol>
+            <li>
+            Substitute \(M = M_0 - bt\) into that last equation
+            and solve the resulting equation for \(v\). 
+            Use the initial condition \(v(0) = 0\) to evaluate the constant.
+            </li>
+            <li>
+            Determine the velocity of the rocket at time \(t = M_2/b.\) 
+            This is called the <em>burnout velocity</em>.
+            </li>
+            <li>
+            First determine the height of the rocket \(y = y(t)\) at the burnout time,
+            then find a formula for the height of the rocket at any time \(t\).
+            </li>
+        </ol>
+    </li>
+    -->
+    <!--
+    <li class="hard">
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        In a famous 18th-century problem, known as <em>Buffon’s needle problem</em>, 
+        a needle of length \(h\) is dropped onto a flat surface (e.g. a wood floor) 
+        on which parallel lines \(L\) units apart, \(L \gt h\), 
+        have been drawn (e.g. \(L\) is the width of a wood plank). 
+        The problem is to determine the probability that the needle 
+        will come to rest intersecting one of the lines. 
+        Assume that the lines run east-west, parallel to the \(x\)-axis 
+        in a rectangular coordinate system. 
+        Let \(y\) be the distance from the “southern” end of the needle 
+        to the nearest line to the north. 
+        (If the needle’s southern end lies on a line, let \(y = 0\). 
+        If the needle happens to lie east-west, 
+        let the “western” end be the “southern” end.) 
+        Let \(\theta\) be the angle that the needle makes 
+        with a ray extending eastward from the “southern” end. 
+        Then \(0 \leq y \leq L\) and \(0 \leq \theta \leq \pi\)
+        Note that the needle intersects one of the lines 
+        only when \(y \lt h \sin(\theta)\). 
+        Now, the total set of possibilities for the needle 
+        can be identified with the rectangular region
+        where \(0 \leq y \leq L\) and \(0 \leq \theta \leq \pi\)
+        and the proportion of times that the needle intersects a line is the ratio 
+        \[\frac{\text{area under } y = h \sin(\theta)}{\text{area of rectangle}}\,.\]
+        This ratio is the probability that the needle intersects a line. 
+        Find the probability that the needle will intersect a line if \(h = L\). 
+        What if \(h = L/2?\)
+    </li>
+    -->
+</ol>
+</main>
+</body>
+
+</html>
+

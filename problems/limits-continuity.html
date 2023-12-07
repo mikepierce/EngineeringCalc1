@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Limits and Continuity | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+<style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} img{width:4.2in;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Limits &amp; Continuity</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        Evaluate each limit, or determine that the limit doesn’t exist.
+        \[
+            \lim\limits_{x \to 4} \frac{2x-9}{x+4}
+            \qquad
+            \lim\limits_{x \to -4} \frac{3x^2+9x-5}{x^2-16}
+            \qquad
+            \lim\limits_{x \to 100} \frac{x-100}{10-\sqrt{x}}
+            \qquad
+            \lim\limits_{x \to 0} \left(\frac{1}{x} - \frac{1}{x^2+1}\right)
+        \]
+        \[
+            \lim\limits_{x \to -3} \frac{|x+3|}{2x+6}
+            \qquad
+            \lim\limits_{x \to 0.25^{-}} \frac{4x-1}{|4x^3-x^2|}
+            \qquad
+            \lim\limits_{x \to 0^-} \left(\frac{1}{|x|} - \frac{1}{x}\right)
+            \qquad
+            \lim\limits_{x \to 0^+} \left(\frac{1}{|x|} - \frac{1}{x}\right)
+        \]
+    </li>
+    <li> 
+        Using the fact that \(\lim_{x \to 0} \sin(x)/x = 1\)
+        and the “limit laws" demonstrate how to algebraically find 
+        the values of the following limits.
+        \[
+            \lim\limits_{x \to 0} \frac{\sin(3x)}{7x}
+            \qquad
+            \lim\limits_{x \to 0} \frac{\sin(3x)}{\sin(7x)}
+            \qquad
+            \lim\limits_{x \to 0} \frac{x\cos(x)}{\tan(x)}
+            \qquad
+            \lim\limits_{x \to 0} \frac{\sin^2(2x)}{x^2}
+        \]
+    </li>
+    <li> 
+        Without referencing technology, 
+        determine the value of each limit.
+        \[
+            \lim\limits_{x \to \infty} \sqrt{x}
+            \qquad
+            \lim\limits_{x \to 7^+} \frac{x^2-x-40}{x-7}
+            \qquad
+            \lim\limits_{x \to 7^-} \frac{x^2-3x-28}{x-7}
+            \qquad
+            \lim\limits_{x \to 7} \frac{49}{(x-7)^2}
+        \]
+        \[
+            \lim\limits_{x \to \infty} \frac{3x^2-7x+5}{2x-1}
+            \qquad
+            \lim\limits_{x \to \infty} \frac{3x^2-7x+5}{(2x-1)^2}
+            \qquad
+            \lim\limits_{x \to \infty} \frac{3x^2-7x+5}{(2x-1)^3}
+        \]
+    </li>
+    <li> 
+        Demonstrate how to evaluate each of these limits.
+        Hint: “conjugate”
+        \[
+            \lim\limits_{x \to 1} \frac{1-\sqrt{x}}{1-x}
+            \qquad
+            \lim\limits_{x \to 0} \frac{1-\sqrt{1-x^2}}{x}
+            \qquad
+            \lim\limits_{x \to 0} \frac{1-\sqrt{1-x^2}}{x^2}
+        \]
+    </li>
+    <li> 
+        Evaluate each limit, or determine that the limit doesn’t exist.
+        <figure> <img width="648" src="img/limits.png"> </figure>
+        \[
+            \lim\limits_{x \to -\infty} f(x)
+            \qquad
+            \lim\limits_{x \to -2} f(x)
+            \qquad
+            \lim\limits_{x \to -1^-} f(x)
+            \qquad
+            \lim\limits_{x \to -1^+} f(x)
+            \qquad
+            \lim\limits_{x \to -1} f(x)
+        \]
+        \[
+            \lim\limits_{x \to 0} f(x)
+            \qquad
+            \lim\limits_{x \to 1} f(x)
+            \qquad
+            \lim\limits_{x \to 2} f(x)
+            \qquad
+            \lim\limits_{x \to \infty} f(x)
+        \]
+        <!--
+        <br>
+        <br>
+        -->
+    </li>
+    <li> 
+        Let \(g\) be the function defined piecewise as
+        <!--
+        \[
+            g(x) = \begin{cases}
+                -x &\text{ for } x \lt 1
+                \\7 &\text{ for } x=1
+                \\x^2-2 &\text{ for } 1 \lt x \leq 5
+                \\7x-5 &\text{ for } 2 \lt 5
+            \end{cases}
+        \]
+        -->
+        \[
+            g(x) = \begin{cases}
+                -x &\text{for } x \lt 1 \qquad &7 &\text{for } x=1
+                \\x^2-2 &\text{for } 1 \lt x \leq 5 \qquad &7x-5 &\text{for } 5 \lt x
+            \end{cases}
+        \]
+        <p>
+        Evaluate the following. If a limit doesn’t exist, say so.
+        </p>
+        \[
+            \displaystyle \lim\limits_{x \to 1^-} g(x)
+            \quad
+            \displaystyle \lim\limits_{x \to 1} g(x)
+            \quad
+            \displaystyle  g(1)
+            \quad
+            \displaystyle \lim\limits_{x \to 5^-} g(x)
+            \quad
+            \displaystyle \lim\limits_{x \to 5^+} g(x)
+            \quad
+            \displaystyle \lim\limits_{x \to 5} g(x)
+        \]
+    </li>
+    <li> 
+        Use a computing device to approximate 
+        the value of these limits
+        accurate to seven decimal places.
+        \[
+            \lim\limits_{x \to \infty} x^{\frac{1}{x}}
+            \qquad
+            \lim\limits_{x \to 0} \; 4\arctan\!\left(x^x\right)
+            \qquad
+            \lim\limits_{x \to \infty} \left(\frac{x}{x+1}\right)^x
+        \]
+    </li>
+    <li> 
+        For functions \(f\) and \(g,\)
+        it may be that \(\lim_{x \to c}\big(f(x) + g(x)\big)\) exists
+        even though neither \(\lim_{x \to c}f(x)\) nor \(\lim_{x \to c}g(x)\) exist.
+        Find examples of such functions.
+    </li>
+    <li> 
+        For functions \(f\) and \(g,\)
+        it may be that \(\lim_{x \to c}\big(f(x)g(x)\big)\) exists
+        even though neither \(\lim_{x \to c}f(x)\) nor \(\lim_{x \to c}g(x)\) exist.
+        Find examples of such functions.
+    </li>
+    <li> 
+        Let \(g\) be the function defined piecewise as
+        \[
+            g(x) = \begin{cases}
+                -1 &\text{ for } x \lt -3
+                \\f(x) &\text{ for } -3 \leq x \lt 1
+                \\-x^2+5 &\text{ for } x \geq 1
+            \end{cases}
+        \]
+        <ol>
+            <li> Find an example of a linear function \(f\) such that \(g\) is continuous. </li> 
+            <li> Find an example of a <em>non-linear</em> function \(f\) such that \(g\) is continuous. </li> 
+            <!--
+            <li class="hard"> 
+                Find an example of a function \(f\) 
+                such that \(g\) will have a pole 
+                (non-removable discontinuity, asymptote)
+                at \(x=0\) but will be continuous otherwise.
+            </li> 
+            -->
+        </ol>
+    </li>
+    <li>
+        How can you very quickly <em>prove</em>
+        that the polynomial \(x^{171}-7x^2-1\) 
+        has a root on the domain \([0,2]\)
+        by invoking the Intermediate Value Theorem?
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        <h4 class="screen">James Stewart</h4>
+        Does there exist a number 
+        that is exactly one more than its cube?
+    </li>
+    <li>
+        If \(\lim_{x \to c} \big(f(x) + g(x)\big) = 11\)
+        and \(\lim_{x \to c} \big(f(x) - g(x)\big) = 7,\)
+        what must the value of
+        \(\lim_{x \to c} \big(f(x)g(x)\big)\) be?
+    </li>
+    <li>
+        <h4>True or False?</h4>
+        Suppose that a function \(f\) defined on some domain \([a,b]\)
+        has the following property:
+        for any \(N\) between \(f(a)\) and \(f(b)\)
+        there exists some \(c\) between \(a\) and \(b\)
+        such that \(f(c) = N.\)
+        Then \(f\) must be a continuous function.
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

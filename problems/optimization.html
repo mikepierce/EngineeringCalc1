@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Math135 Optimization Problems | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Optimization Problems</h1>
+</header>
+<main>
+<ol>
+    <li>
+        What are the global extrema
+        of this function on the interval \([0,4]?\)
+        \[f(x) = x^3 - 7x^2 +14x -8\]
+    </li>
+    <li>
+        What is the minimum vertical distance between 
+        the graphs of these functions?
+        \[f(x) = 4-(x+1)^2 \quad\text{and}\quad g(x) = (x-3)^2+2\]
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://tutorial.math.lamar.edu/classes/calci/optimization.aspx">Dawkins</a></h4>
+        We want to construct a box whose base length is three times the base width. 
+        The material used to build the top and bottom cost $10/ft² 
+        and the material used to build the sides cost $6/ft². 
+        If the box must have a volume of \(50\)ft³ 
+        determine the dimensions that will minimize the cost to build the box.
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://tutorial.math.lamar.edu/classes/calci/optimization.aspx">Dawkins</a></h4>
+        A manufacturer needs to make a cylindrical can 
+        that will hold \(12 \mathrm{fl oz}\) of cream soda.
+        Determine the dimensions of the can that will
+        minimize the amount of material used in its construction.
+        (Recall that for food products in the US,
+        \(1 \mathrm{fl oz} \approx 30 \mathrm{ml}\), 
+        which as a volume corresponds to 30 \mathrm{cm}^3\)).
+    </li>
+    <!--
+    <li>
+        <h4 class="screen"><a title="Exercise 5.8.3" href="https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_Optimization.html">SFU</a></h4>
+        Over a time period of five years, it is shown that the number
+        \(N\) of independently owned bakeries is given by
+        \[ N(t)=2+8.82t-7.73t^2+2.08t^3-0.175t^4 \ \ \ 0\leq t \leq 5 \]
+        (in millions of bakeries). 
+        Determine the absolute extrema of the function
+        \(N\) on the interval \([0,5]\) and interpret your results.
+    </li>
+    -->
+    <li>
+        A <em>Norman window</em> has a shape 
+        of a rectangle surmounted by a semicircle —
+        it has three straight sides and one curved side on top,
+        and the diameter of the semi-circular curved side
+        is equal to the width of the rectangle.
+        <ol>
+            <li>
+            If the perimeter of the window is fixed at 12 ft,
+            what are the dimensions that result in 
+            the window having maximal area?
+            </li>
+            <li>
+            If the area of the window is fixed at 10 ft²,
+            what are the dimensions that result in 
+            the window having minimal perimeter?
+            </li>
+        </ol>
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://openstax.org/books/calculus-volume-1/pages/4-7-applied-optimization-problems">openstax</a></h4>
+        Two poles are connected by a wire that is also connected to the ground. The first pole is 20 ft tall and the
+        second pole is 10 ft tall. There is a distance of 30 ft between the two poles. Where should the wire be
+        anchored to the ground to minimize the amount of wire needed?
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://openstax.org/books/calculus-volume-1/pages/4-7-applied-optimization-problems">openstax</a></h4>
+        A rectangle is to be inscribed in the ellipse
+        \[\frac{x^2}{4} + \frac{y^2}{1} = 1\,.\]
+        with its sides parallel and perpendicular to the coordinate axis —
+        i.e. it’s not tilted.
+        What should the dimensions of the rectangle be to maximize its area? 
+        What is the maximum area?
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://tutorial.math.lamar.edu/Solutions/CalcI/MoreOptimization/Prob6.aspx">Dawkins</a></h4>
+        A long steel pipe is being carried, perfectly level, down a hallway.
+        The hallway is 15 ft wide, but makes an abrupt right-angled turn
+        into a hallway that is only 6 ft wide.
+        What is the longest the pipe could possibly be to make this turn
+        while still being held perfectly level?
+    </li>
+    <li>
+        <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
+        With a straight piece of wire 4m long, you are to create 
+        an equilateral triangle and a square, or either one only. 
+        Suppose a piece of length \(x\) meters is bent into triangle 
+        and the reminder is bent into a square. 
+        Find the value of \(x\) which maximizes 
+        the total area of both triangle and square.
+    </li>
+    <li>
+        What are the dimensions of an isosceles triangle 
+        inscribed in a circle of radius \(r\) 
+        (with vertices on the boundary of the circle)
+        that has maximal area?
+    </li>
+    <li>
+        Suppose one side of a triangle has length \(\ell\) 
+        and another side has length \(2\ell\).
+        Show that he maximum possible area of the triangle is \(\ell^2.\)
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.ocf.berkeley.edu/~reinholz/ed/08sp_m160/lectures/derivatives_related_rates.tex">Reinholz</a></h4>
+        Find the equation of the line through \((2,4)\) 
+        that cuts off the least area from the first quadrant.
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
+        If \(m\) and \(n\) are positive integers, 
+        find the maximum value of \(f(x) = x^m(1-x)^n.\)
+    </li>
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        If the tangent line at a point \(P\) on the curve \(y = x^3\) 
+        intersects the curve again at \(Q\), 
+        let \(A\) be the area of the region bounded by the curve 
+        and the line segment \(PQ.\)
+        Let \(B\) be the area of the region 
+        defined the same way but starting with \(Q\) instead of \(P.\)
+        What is the relationship between \(A\) and \(B?\)
+    </li>
+    <!--
+    <li>
+        <h4 class="screen">Stewart</h4>
+        An isosceles triangle is circumscribed about the unit circle so that the equal sides meet at the
+        point \((0,a)\) on the \(y\)-axis (see the figure). 
+        Find the value of a that minimizes the lengths of the equal sides.
+        <figure> <img width="423" src="img/opt-circletriangle.png"> </figure>
+    </li>
+    -->
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        The line \(y = mx + b\) intersects the parabola \(y = x^2\) 
+        in points \(A\) and \(B\). Find the point \(P\) on the arc 
+        the parabola that maximizes the area of the triangle \(PAB\).
+        <figure> <img width="216" src="img/triangle-parabola.png"> </figure>
+    </li>
+    <li>
+        Consider the scenario from a previous question
+        about carrying a long steel pipe around a corner.
+        Suppose that the hallways were both 12 ft tall,
+        and the pipe <em>didn’t</em> have to be held perfectly level.
+        What is the longest the pipe could possibly be to make this turn?
+    </li>
+    <!--
+    <li>
+        <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
+        Suppose we are planning to make a taco 
+        from a round tortilla with diameter 8 inches 
+        by bending the tortilla so that it is shaped 
+        as if it is partially wrapped around a circular cylinder. 
+        e will fill the tortilla to the edge (but no more) 
+        with meat, cheese, and other ingredients. 
+        Our problem is to decide how to curve the tortilla 
+        in order to maximize the volume of food it can hold.
+        <figure> <img width="432" src="img/taco.png"> </figure>
+        <ol>
+            <li>
+                We start by placing a circular cylinder of radius \(r\) 
+                along a diameter of the tortilla 
+                and folding the tortilla around the cylinder. 
+                Let \(x\) represent the distance from the center 
+                of the tortilla to a point \(P\) on the diameter. 
+                Show that the cross-sectional area of the filled taco 
+                in the plane through \(P\) perpendicular to the axis 
+                of the cylinder is
+                \[ A(x) = r\sqrt{16-x^2} - \frac{1}{2}r^2\sin\!\left(\frac{2}{r}\sqrt{16-x^2}\right)\,. \]
+                Write an expression for the volume of the filled taco.
+            </li>
+            <li>
+            Using technology approximate the value of \(r\) 
+            that maximizes the volume of the taco.
+            </li>
+        </ol>
+    </li>
+    -->
+</ol>
+</main>
+</body>
+
+</html>
+

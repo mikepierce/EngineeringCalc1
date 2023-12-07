@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Newton's Method | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+    
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>@media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Newton’s Method</h1>
+</header>
+
+<main>
+<ol>
+    <li>
+        <p>
+        For any positive number \(N,\)
+        here is a simple method for approximating 
+        the square root of \(N.\)
+        Start by guessing/estimating 
+        some positive integer \(x\) near \(\sqrt{N}.\)
+        Plugging \(x\) into the formula
+        \[x_\star = \frac{1}{2}\left(x + \frac{N}{x}\right)\]
+        will result in a number \(x_\star\) 
+        that is closer to \(\sqrt{N}\) than \(x.\)
+        In fact, plugging <em>any</em> input into this formula
+        will return a number closer to \(\sqrt{N}\) than the input.
+        Furthermore, the successive outputs that result
+        from recursively applying this formula, 
+        plugging each output back in as the next input,
+        will approach the exact value of \(\sqrt{N}.\)
+        </p>
+        <p>
+        This procedure is commonly called 
+        the <em>Babylonian method</em> for computing square roots 
+        since it was known to Babylonian mathematicians millennia ago.
+        </p>
+        <ol>
+            <li>
+                Show that this formula 
+                is the same as the “next guess” formula
+                that results from applying Newton’s method
+                to approximate a solution of the equation \(x^2-N=0,\)
+                hence justifying why the Babylonian method 
+                of approximating \(\sqrt{N}\) works.
+            </li>
+            <li class="hard">
+                Write a computer program 
+                that iteratively applies this formula 
+                to calculate the square root of a number. 
+                (Note: the TI-83/84+ series of calculators are programmable.)
+            </li>
+            <li class="hard">
+                Using this formula, 
+                write a recursive computer program 
+                that calculates the square root
+                of a number accurate to the precision
+                of the language’s <code>float</code> data type.
+            </li>
+            <li>
+                Come up with similar recursive formulas
+                for the following operations:
+                \[
+                    \sqrt[3]{x}
+                    \qquad \qquad \qquad \qquad \qquad
+                    \frac{1}{x}
+                \]
+                <aside>
+                    It can be tough to figure out
+                    the one for \(\frac{1}{x}\).
+                    The formula (procedure) you get for it though, called 
+                    <a href="https://en.wikipedia.org/wiki/Division_algorithm#Newton%E2%80%93Raphson_division">Newton-Raphson division</a>,
+                    is rather noteworthy.
+                </aside>
+            </li>
+        </ol>
+    </li>
+    <li>
+        The equation \(\cos(x) = x\) has a single solution.
+        We call it the
+        <a href="https://mathworld.wolfram.com/DottieNumber.html">Dottie Number</a>.
+        <ol>
+            <li>
+                Demonstrate <em>Newton’s method</em>
+                by calculating the Dottie number
+                accurate to eight decimal places.
+            </li>
+            <li class="hard">
+                Write a program that performs Newton’s Method,
+                and use that program to calculate the Dottie number
+                accurate to the precision of the language’s <code>float</code> data type.
+                Note the TI-83/84+ series of calculators are programmable.
+                Can your program calculate \(x\)
+                to arbitrary precision?
+            </li>
+            <li class="hard">
+                Put your calculator in <code>radians</code> mode.
+                Take the cosine of <em>any</em> number.
+                Then take the cosine of that result.
+                And then take the cosine of that result.
+                And then take the cosine of that result.
+                Keep doing this for awhile,
+                and you should notice that this process
+                converges to that same solution to \(\cos(x) = x\).
+                Assuming this does converge,
+                why must it converge to this same number?
+            </li>
+        </ol>
+    </li>
+    <li>
+        In general, there is no explicit formula
+        for the roots of polynomial of degree higher than four.
+        However we can use Newton’s method 
+        to approximate the roots of any polynomial.
+        Approximate the value of the single real root
+        of this polynomial using Newton’s method.
+        \[x^5 + 2x^4 + 3x^3 + 4x^2 + 5x +6\]
+    </li>
+    <li>
+        The polynomial \(x^3-x\) has three roots: 
+        \(-1\) and \(0\) and \(1.\)
+        Determine the set of all real numbers \(x\) 
+        such that Newton’s method will converge to \(1\)
+        upon being initiated with guess \(x\).
+    </li>
+    <li>
+        The arctangent function has a single root at zero.
+        But, depending on the initial guess, 
+        Newton’s method might fail to hone in on this root,
+        and will instead return numbers further and further away from zero.
+        Graph the function \(y = \arctan(x)\) and,
+        based on the geometry of the graph,
+        figure out for which initial guesses 
+        Newton’s method will converge to zero,
+        and for which initial guesses Newton’s method will diverge.
+    </li>
+    <li>
+        Sometimes Newton’s method fails to converge,
+        but <em>not</em> because the successive approximations
+        blow up towards infinity.
+        <ol>
+            <li>
+                Consider the polynomial \(x^3-2x+2.\)
+                This polynomial has a root at \(x \approx -1.7693.\)
+                However, applying Newton’s method, 
+                if we start with the initial guess at zero,
+                the method will not converge to the root.
+                Investigate why Newton’s method fails in this case.
+                Are there any other initial guesses for which
+                Newton’s method will fail to converge to the root?
+            </li>
+            <li>
+                Similarly, investigate \(x^5-x-1\)
+                with an initial guess of zero.
+            </li>
+            <li class="hardhard">
+                <p>
+                To ascribe vocabulary to the phenomenon 
+                that the previous prompts demonstrate,
+                certain initial guesses \(x_0\) may not 
+                lead to a sequence \(x_1, x_2, \dotsc\)
+                that converges to the root of the function,
+                but instead enter an <em>orbit</em>.
+                The polynomial \(x^3-2x+2\)
+                with initial guess \(x_0=0\) 
+                induces a \(2\)-orbit,
+                The polynomial \(x^5-x-1\) 
+                with initial guess \(x_0=0\) 
+                induces and \(3\)-orbit.
+                </p>
+                <p>
+                Given a positive integer \(n\)
+                find an example of a polynomial 
+                that will induce an \(n\)-orbit
+                for an initial guess of zero.
+                </p>
+            </li>
+        </ol>
+    </li>
+</ol>
+</main>
+</body>
+
+</html>
+

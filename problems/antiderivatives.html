@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Areas, Accumulations, and Antiderivatives | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
+</head>
+
+<body>
+<header>
+    <h1>Areas, Accumulations, <br>&amp; Antiderivatives</h1>
+</header>
+
+<main>
+<!--
+<p>
+    Note that some of the prompts on this page 
+    don’t ask for an <em>exact</em> (true) answer,
+    but instead an <em>approximation</em>.
+    Try to keep your approximations accurate 
+    to within \(10^{-3}\) of the true answer.
+</p>
+-->
+<ol>
+    <li>
+        For each of the following functions, 
+        write down the formula for 
+        <em>an</em> antiderivative of that function.
+        Note you can always check your antiderivative 
+        by taking its derivative,
+        which you can in-turn check with
+        <a href="https://www.wolframalpha.com/">WolframAlpha</a>.
+        <figure>
+            <div> \( a'(x) = 124x^{123}\) </div>
+            <div> \( b'(x) = x^{421}\) </div>
+            <div> \( c'(x) = x^4+x^3+x^2+x+1 \) </div>
+            <div> \( d'(x) = \left(1-x^6\right)^2\) </div>
+            <div> \( f'(x) = 2\sqrt[3]{x} + \frac{3}{x^6} \) </div>
+            <div> \( g'(x) = \frac{1}{\sqrt[3]{x}} \) </div>
+            <div> \( h'(x) = \cos(x)\) </div>
+            <div> \( j'(x) = \sin(x) + 1\) </div>
+            <div> \( k'(x) = 4\sec(x)\tan(x)\) </div>
+            <div> \( m'(x) = \csc^2(x)\) </div>
+            <div> \( n'(x) = 3\cos\!\left(3x\right)\) </div>
+            <div> \( p'(x) = 2x\cos\!\left(x^2\right)\) </div>
+        </figure>
+    </li>
+    <li>
+        <p>
+        We denote the \(n^\text{th}\) derivative 
+        of a function \(f\) as \(f^{(n)}.\)
+        For example, \(f^{(13)}(x)\) is the thirteenth derivative of \(f,\)
+        and is better notation than \(f'''''''''''''(x)\) 
+        for the thirteenth derivative
+        </p>
+        <p>
+        Given \({f^{(5)}(x) = 12x+1}\)
+        write down a possible formula for \(f(x).\)
+        </p>
+    </li>
+    <li>
+        Express each of the following sums in (\(\Sigma\)) notation.
+        <figure>
+            <div> \(2 + 4 + 6 + 8 + 10 + 12\) </div>
+            <div> \(1 + 3 + 5 + 7\) </div>
+            <div> \(\frac{2}{3}+\frac{4}{9}+\frac{8}{27}+\frac{16}{81}\) </div>
+            <div> \(6 - 7 + 8 - 9 + 10 - 11 + 12\) </div>
+            <div> \(1 + 4 + 9 + 16 + \dotsb + 529\) </div>
+            <div> \(\frac{\sqrt{3}}{2}+\frac{1}{2}+0-\frac{1}{2}-\frac{\sqrt{3}}{2}-1-\frac{\sqrt{3}}{2}-\frac{1}{2}-0+\frac{1}{2}+\frac{\sqrt{3}}{2}+1\) </div>
+        </figure>
+    </li>
+    <li>
+        Calculate the exact value of each of these sums.
+        <figure>
+            <div> \( \displaystyle \sum_{n=1}^{4} \frac{1}{n} \) </div>
+            <div> \( \displaystyle \sum_{n=0}^{5} \frac{2}{3}n \) </div>
+            <div> \( \displaystyle \sum_{n=1}^{9} (-1)^n \) </div>
+            <div> \( \displaystyle \sum_{n=1}^{1234} 2 \) </div>
+            <div> \( \displaystyle \sum_{n=-9}^{10} n^3 \) </div>
+        </figure>
+    </li>
+    <li>
+        Consider the sum 
+        \[\sum_{n=1}^{M} \frac{1}{2^n}\;\;=\;\; \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\dotsb+\frac{1}{2^M} \]
+        where the upper-limit is some variable \(M.\)
+        Calculate the value of this sum for \(M=3\), and for \(M=7.\)
+        What value do you suppose this sum approaches 
+        as \(M\) approaches \(\infty?\)
+    </li>
+    <li>
+        A cyclist is wearing a heart rate monitor 
+        while competing in a \(50\) mile bike race.
+        They check the monitor, which tracks 
+        their heart rate measured in beats-per-minute (bpm), 
+        irregularly throughout the race.
+        <figure>
+        <table>
+        <tbody>
+            <tr> 
+                <th>Minutes since Start</th> 
+                <td>0</td>  
+                <td>10</td>  
+                <td>33</td> 
+                <td>58</td>  
+                <td>70</td>  
+                <td>101</td> 
+                <td>120</td> 
+            </tr>
+            <tr> 
+                <th>Heart Rate</th> 
+                <td>66</td>  
+                <td>73</td>  
+                <td>80</td> 
+                <td>88</td>  
+                <td>97</td>  
+                <td>68</td> 
+                <td>87</td> 
+            </tr>
+        </tbody>
+        </table>
+        </figure>
+        First, briskly sketch a scatter plot of this data
+        with your independent variable \(x\) 
+        measured in minutes since the beginning of the race.
+        <ol>
+            <li>
+                Estimating, 
+                how many times did their heart beat 
+                in those first \(10\) minutes of the race?
+                What about the first \(33\) minutes of the race?
+                What about the first \(60\) minutes of the race?
+            </li>
+            <li>
+                Assume that, for the period between any two times 
+                that the cyclist checks their heart rate,
+                their heart rate is between 
+                the rates the monitor reports.
+                (E.g. between minutes \(58\) and \(70,\)
+                their heart rate stays between \(88\) bpm and \(97\) bpm.)
+                Under this assumption, can you come up with 
+                an upper-bound for the number of times
+                their heart beat during the race?
+                I.e. can you find a number \(M\) 
+                and say for certain their heart beat 
+                no more than \(M\) times during the race?
+                What about a lower-bound?
+            </li>
+            <li>
+                Now let’s assume something stronger:
+                assume that, for the period between any two times 
+                that the cyclist checks their heart rate,
+                their heart rate can be accurately described 
+                by a linear function of time.
+                (E.g. for any \(t\) between minutes \(58\) and \(70,\)
+                their heart rate is given by the expression
+                \(\frac{9}{12}(t-58)+58.\))
+                Now since we are assuming we know their heart rate
+                at any time throughout the race,
+                we should be able to determine a exact number
+                for the number of times their heart beat.
+                How do we determine this number?
+            </li>
+        </ol>
+    </li>
+</ol>
+
+<h3>Challenges</h3>
+<ol>
+    <li>
+        <p>
+        Recall the classic proof that 
+        \( 1+2+3+4+\dotsb+n = \frac{1}{2}n(n+1)\,. \)
+        </p>
+        <p>
+        Using a similar “number arrangement” argument, prove that
+        \[ 1^2+2^2+3^2+4^2+\dotsb+n^2 = \frac{n(n+1)(2n+1)}{6}\,. \]
+        </p>
+        <p>
+        Hint: Recall that \(n^2\) is the area 
+        of an \({n \times n}\) square.
+        Your “number arrangement” might need more dimensions
+        than the other example. 
+        It also might be helpful to know that a cube
+        can be decomposed into three square-based pyramids. 
+        … there are multiple ways to prove this,
+        so don’t think that you <em>need</em> 
+        to use all/any of these facts.
+        </p>
+    </li>
+</ol>
+
+</main>
+</body>
+
+</html>
+
