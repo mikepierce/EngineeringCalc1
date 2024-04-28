@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -27,91 +27,71 @@
     <li>
         What is a formula for the derivative
         of each of the following functions?
-        \[
-            f(t) = \sqrt{t^3}-\frac{1}{\pi}\tan(t)
-            \qquad
-            g(x) = x^5\sin(x)
-            \qquad
-            h(\theta) = \sec\left(\sqrt{7\theta}\right)
-        \]
+        <figure>
+            <div> \(\displaystyle f(t) = \sqrt{t^3}-\frac{1}{\pi}\tan(t) \)</div>
+            <div> \(\displaystyle g(x) = x^5\sin(x) \)</div>
+            <div> \(\displaystyle h(\theta) = \sec\Bigl(\sqrt{7\theta}\Bigr) \)</div>
+        </figure>
     </li>
     <li>
         What is an equation for the line 
-        tangent to the graph \(y = h(\theta)\)
-        of the function \( h(\theta) = \sec\left(\sqrt{7\theta}\right)\)
-        at the point \((2, h(2))\)?
-        Write down the constants accurate to five decimal places. 
+        tangent to the curve \(y = \sec\Bigl(\sqrt{7\theta}\Bigr)\)
+        at the point \(\bigl(2, h(2)\bigr)\)?
+        Express the parameters accurate to within \(\pm 0.001\). 
     </li>
     <li>
-        What is the 307th derivative of sine?
+        What is the \(307^\text{th}\) derivative of sine?
     </li>
     <li>
         What is a formula for the derivative
         of each of the following functions?
-        \[
-            a(x) = \frac{\sin(x)}{x}
-            \qquad \qquad
-            b(x) = \frac{x}{\sin(x)}
-            \qquad \qquad
-            c(x) = \sin\!\left(\frac{1}{x}\right)
-        \]
-        \[
-            d(x) = \cos\!\left(x^{42}\right)
-            \qquad
-            f(x) = \cos^{42}(x)
-            \qquad 
-            g(x) = 42\cos^{42}\!\big(42x^{42}-42\big)+42
-        \]
-        \[
-            h(x) = \frac{\sec(x)}{\tan(x)}-\sin(x)
-            \qquad
-            j(x) = \frac{\tan(x)}{\sin(x)} - \csc(x)
-            \qquad
-            k(x) = \frac{\cos^2(x)}{\sin(x)}
-        \]
-        \[
-            \ell(x) = \tan(x)\sqrt{x}
-            \qquad \qquad
-            m(x) = \sqrt{\tan(x)}
-            \qquad \qquad
-            n(x) = \tan\left(\sqrt{x}\right)
-        \]
-        \[
-            \mathcal{o}(x) = \tan\!\big(\!\sin(x)\big)
-            \quad \quad
-            p(x) = \sec\!\big(\!\cot(x)\big)
-            \quad \quad
-            q(x) = \sin\!\big(\!\cos(\tan(x))\big)
-        \]
-        \[
-            \rho(x) = \frac{1}{x +2\csc(x)}
-            \quad \quad
-            \sigma(x) = \frac{x +2\csc(x)}{x}
-            \quad \quad
-            \tau(x) = \frac{x +2\csc(x)}{x -2\csc(x)}
-        \]
-        \[
-            \mu(x) = \frac{\sqrt[3]{x}}{\tan(x)}
-            \quad \quad \quad
-            \nu(x) = \frac{\tan(x)}{\sqrt[3]{x}}
-            \quad \quad \quad
-            \omega(x) = \sqrt[3]{\frac{\sec(x)}{x}}
-        \]
-        \[
-            \varsigma(x) = \sec\!\left(\tan(x^3)\right)
-            \quad
-            \zeta(x) = \sin\!\left(\sqrt{\cos(x)}\right)
-            \quad
-            \xi(x) = \cos\!\left(\frac{\cos(x)}{\cos(\cos(x)}\right)
-        \]
+        <figure>
+            <div> \(\displaystyle a(x) = \frac{\sin(x)}{x} \)</div>
+            <div> \(\displaystyle b(x) = \frac{x}{\sin(x)} \)</div>
+            <div> \(\displaystyle c(x) = \sin\Bigl(\frac{1}{x}\Bigr) \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle d(x) = \cos\bigl(x^{42}\bigr) \)</div>
+            <div> \(\displaystyle f(x) = \cos^{42}(x) \)</div>
+            <div> \(\displaystyle g(x) = 42\cos^{42}\bigl(42x^{42}\bigr) \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle h(x) = \frac{\sec(x)}{\tan(x)}-\sin(x) \)</div>
+            <div> \(\displaystyle j(x) = \frac{\tan(x)}{\sin(x)} - \csc(x) \)</div>
+            <div> \(\displaystyle k(x) = \frac{\cos^2(x)}{\sin(x)} \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle \ell(x) = \tan(x)\sqrt{x} \)</div>
+            <div> \(\displaystyle m(x) = \sqrt{\tan(x)} \)</div>
+            <div> \(\displaystyle n(x) = \tan\bigl(\sqrt{x}\bigr) \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle \mathcal{o}(x) = \tan\bigl(\sin(x)\bigr) \)</div>
+            <div> \(\displaystyle \mathcal{p}(x) = \sec\bigl(\cot(x)\bigr) \)</div>
+            <div> \(\displaystyle \mathcal{q}(x) = \sin\Bigl(\cos\bigl(\tan(x)\bigr)\Bigr) \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle \rho(x) = \frac{1}{x +2\csc(x)} \)</div>
+            <div> \(\displaystyle \sigma(x) = \frac{x +2\csc(x)}{x} \)</div>
+            <div> \(\displaystyle \tau(x) = \frac{x +2\csc(x)}{x -2\csc(x)} \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle \mu(x) = \frac{\sqrt[3]{x}}{\tan(x)} \)</div>
+            <div> \(\displaystyle \nu(x) = \frac{\tan(x)}{\sqrt[3]{x}} \)</div>
+            <div> \(\displaystyle \omega(x) = \sqrt[3]{\frac{\sec(x)}{x}} \)</div>
+        </figure>
+        <figure>
+            <div> \(\displaystyle \varsigma(x) = \sec\Bigl(\tan\bigl(x^3\bigr)\Bigr) \)</div>
+            <div> \(\displaystyle \zeta(x) = \sin\Bigl(\sqrt{\cos(x)}\Bigr) \)</div>
+            <div> \(\displaystyle \xi(x) = \cos\biggl(\frac{\cos(x)}{\cos\bigl(\cos(x)\bigr)}\biggr) \)</div>
+        </figure>
     </li>
     <li>
         <p>
         We denote the \(n^\text{th}\) derivative 
         of a function \(f\) as \(f^{(n)}.\)
-        For example, \(f^{(13)}(x)\) is the thirteenth derivative of \(f,\)
-        and is better notation than \(f'''''''''''''(x)\) 
-        for the thirteenth derivative
+        For example, \(f^{(13)}(x)\) denotes the thirteenth derivative of \(f,\)
+        and denotes it better than \(f'''''''''''''(x).\) 
         </p>
         <p>
         Consider the function \(f(x) = \frac{1}{1-x}.\)
@@ -122,45 +102,39 @@
     </li>
     <li>
         The quotient rule,
-        \[ \frac{\mathrm{d}}{\mathrm{d}x} \left(\frac{f}{g}\right) = \frac{f'g-fg'}{g^2} \]
+        \[ \frac{\mathrm{d}}{\mathrm{d}x} \Biggl(\frac{f}{g}\Biggr) = \frac{f'g-fg'}{g^2} \]
         is superfluous;
         it’s simply a combination of the power rule, 
         product rule, and chain rule.
-        Prove this by noticing that \(f/g = fg^{-1}\)
+        Prove this by noticing that \(f/g = f\times(g)^{-1}\)
         and taking the derivative of the latter.
     </li>
     <li>
         <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
-        Given that \(F(x) = f\!\big(g(x)\big)\) 
+        Given that \(F(x) = f\bigl(g(x)\bigr)\) 
         and the following information, what is \(F'(1)\)?
-        \[ g(1) = 2 \;\;\;\; g'(1) = 3 \;\;\;\; f(1) = 5 \;\;\;\; f'(1) = 7 \;\;\;\; f(2) = 11 \;\;\;\; f'(2) = 13 \]
+        <figure>
+            <div>\(g(1) = 2\)</div>
+            <div>\(g'(1) = 3\)</div>
+            <div>\(f(1) = 5\)</div>
+            <div>\(f'(1) = 7\)</div>
+            <div>\(f(2) = 11\)</div>
+            <div>\(f'(2) = 1\)</div>
+        </figure>
     </li>
     <li> 
         Estimating, based on the graph, what are the values of the following?
         <figure> <img width="648" src="img/limits.png"> </figure>
-        \[
-            f(-2)
-            \quad
-            f'(-2)
-            \quad
-            f''(-2)
-            \qquad
-            f(0)
-            \quad
-            f'(0)
-            \qquad
-            f(2)
-            \quad
-            f'(2)
-            \qquad
-            f(3)
-            \quad
-            f'(3)
-        \]
-        <!--
-        <br>
-        <br>
-        -->
+        <figure>
+            <div>\(f(-2)\)</div>
+            <div>\(f'(-2)\)</div>
+            <div>\(f''(-2)\)</div>
+            <div>\(f'(0)\)</div>
+            <div>\(f(2)\)</div>
+            <div>\(f'(2)\)</div>
+            <div>\(f(3)\)</div>
+            <div>\(f'(3)\)</div>
+        </figure>
     </li>
 </ol>
 
@@ -183,18 +157,18 @@
         (do you remember how to prove that?),
         and the second follows from \(\lim_{x \to 0}\frac{\sin(x)}{x} = 1.\)
     </li>
-    <li>
+    <li class="screen">
         <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
         Consider the function 
         \[ f(x) = \sqrt{1- \sqrt{2- \sqrt{3-x } } }\,. \]
         Determine the domain of \(f\), 
         and calculate a formula for \(f'(x)\).
     </li>
-    <li>
+    <li class="screen">
         <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
         Calculate a formula for the \(n\)th derivative of \(f(x) = x^n/(1-x)\,.\)
     </li>
-    <li>
+    <li class="screen">
         <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
         Without appealing to technology, 
         evaluate the limit

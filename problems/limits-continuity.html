@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-<style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} img{width:4.2in;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -139,19 +139,14 @@
         <p>
         Evaluate the following. If a limit doesn’t exist, say so.
         </p>
-        \[
-            \displaystyle \lim\limits_{x \to 1^-} g(x)
-            \quad
-            \displaystyle \lim\limits_{x \to 1} g(x)
-            \quad
-            \displaystyle  g(1)
-            \quad
-            \displaystyle \lim\limits_{x \to 5^-} g(x)
-            \quad
-            \displaystyle \lim\limits_{x \to 5^+} g(x)
-            \quad
-            \displaystyle \lim\limits_{x \to 5} g(x)
-        \]
+        <figure>
+            <div>\( \displaystyle \lim\limits_{x \to 1^-} g(x)\)</div>
+            <div>\( \displaystyle \lim\limits_{x \to 1} g(x)\)</div>
+            <div>\( \displaystyle  g(1)\)</div>
+            <div>\( \displaystyle \lim\limits_{x \to 5^-} g(x)\)</div>
+            <div>\( \displaystyle \lim\limits_{x \to 5^+} g(x)\)</div>
+            <div>\( \displaystyle \lim\limits_{x \to 5} g(x)\)</div>
+        </figure>
     </li>
     <li> 
         Use a computing device to approximate 
@@ -211,8 +206,10 @@
 <ol>
     <li>
         <h4 class="screen">James Stewart</h4>
-        Does there exist a number 
-        that is exactly one more than its cube?
+        <q>Does there exist a number 
+        that is exactly one more than its cube?</q>
+        The challenge is to cunningly answer this question
+        without actually calculating any such number.
     </li>
     <li>
         If \(\lim_{x \to c} \big(f(x) + g(x)\big) = 11\)
@@ -229,6 +226,17 @@
         such that \(f(c) = N.\)
         Then \(f\) must be a continuous function.
     </li>
+    <!--
+    <li class="screen">
+        We’ve been taking as an assumption that 
+        \(\lim_{x \to 0} \sin(x)/x = 1,\)
+        but this can be proven geometrically.
+    </li>
+    <li class="screen">
+        TK also prove
+        \(\lim_{x \to 0} \frac{\cos(x)-1}{x} = 0\)
+    </li>
+    -->
 </ol>
 </main>
 </body>

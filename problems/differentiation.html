@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -24,6 +24,7 @@
 
 <main>
 <ol>
+    <!--
     <li>
         A drag race, commonly called a <em>pass</em>, 
         is run on a \(1320\) ft (¼ mile) long track. 
@@ -35,20 +36,52 @@
         How fast was the dragster going <em>exactly</em>
         five seconds into the pass?
     </li>
+    -->
+    <li>
+        A small child on the roof of the Empire State Building 
+        hurls a penny towards the city streets below. 
+        The height of the penny after \(t\) seconds,
+        willfully ignoring air resistance,
+        can be fairly accurately modelled by the function
+        <figure>
+            <div> \(\displaystyle f(t) = 1250 - 42t - 5t^2\,.\) </div>
+        </figure>
+        At what speed does the penny hit the ground?
+    </li>
     <li>
         What is a formula for the derivative
         of each of the following functions?
-        \[
-        f(t) = -3t^3 -2t^2 + t^{\pi^2} - \frac{1}{3t^6} - 4.5
-        \qquad
-        g(x) = \sqrt{x}+\sqrt[3]{x}+\sqrt[3]{x^2}
-        \]
+        <figure>
+            <div>\( \displaystyle \alpha(t) = -3t^3 -2t^2 + t^{\pi^2} - \frac{1}{3t^6} - 4.5\)</div>
+            <div>\( \displaystyle \beta(x) = \sqrt{x}+\sqrt[3]{x}+\sqrt[3]{x^2}\)</div>
+        </figure>
     </li>
     <li>
         What are the values of \(\ell'(1)\) and \(\ell''(3)\),
-        accurate to five decimal places,
+        accurate to within ±one-thousandth,
         for the function \(\ell\) defined as follows?
         \[\ell(\omega) = 3.11\omega^{5.809}-17\omega^{-0.1}\]
+    </li>
+    <li>
+        The function \(A\) with formula \( A(r) = \pi r^2\)
+        returns the area of a circle given its radius.
+        What is a formula for the derivative 
+        \(\frac{\mathrm{d}A}{\mathrm{d}r}?\)
+        This formula should look familiar.
+        Is there a reason for this,
+        or is it just a coincidence?
+    </li>
+    <li>
+        The function \(V\) with formula \( V(r) = \frac{4}{3}\pi r^3\)
+        returns the volume of a sphere given its radius.
+        What is a formula for the derivative
+        \(\frac{\mathrm{d}V}{\mathrm{d}r}?\)
+        Based on the familiar formula for 
+        \(\frac{\mathrm{d}A}{\mathrm{d}r}\)
+        that appeared in the previous question,
+        speculate what \(\frac{\mathrm{d}V}{\mathrm{d}r}\)
+        could be a formula for.
+        Do some quick research: is your speculation correct?
     </li>
     <li>
         Take the derivative of the following function two different ways: 
@@ -57,8 +90,7 @@
         Verify that the results are equivalent.
         \[f(x) = \left(x^2-7x\right)\!(4x-5)\]
     </li>
-    <!--
-    <li>
+    <li class="screen">
         Demonstrate how to calculate the derivative
         of this function two ways:
         once by directly using the quotient rule,
@@ -66,8 +98,7 @@
         to avoid using the quotient rule entirely.
         \[h(t) = \frac{\sqrt{t}-2t}{t^3}\]
     </li>
-    -->
-    <li>
+    <li class="screen">
         Take the derivative of the following function two different ways: 
         first by using the quotient rule straight-away,
         then again by first doing polynomial long division before you take the derivative.
@@ -76,7 +107,9 @@
     </li>
     <li>
         What is an equation for the line tangent to the curve
-        \(y = \frac{1}{2}x^2-3\) at the point where \(x = 2?\)
+        \(y = \frac{1}{2}x^2-3\) 
+        <!--at the point where \(x = 2?\)-->
+        where \(x = 2?\)
     </li>
     <li>
         The curve defined by the equation
@@ -95,25 +128,6 @@
         will the tangent line be perfectly horizontal?
     </li>
     <li>
-        The function \(A\) with formula \( A(r) = \pi r^2\)
-        returns the area of a circle given its radius.
-        What is a formula for the derivative 
-        \(\frac{\mathrm{d}A}{\mathrm{d}r}?\)
-        This formula should look familiar.
-        Is there a reason for this,
-        or is it just a coincidence?
-    </li>
-    <li>
-        The function \(V\) with formula \( V(r) = \frac{4}{3}\pi r^3\)
-        returns the volume of a sphere given its radius.
-        What is a formula for the derivative
-        \(\frac{\mathrm{d}V}{\mathrm{d}r}?\)
-        Based on the familiar formula for \(A'\)
-        that appeared in the previous question,
-        speculate what \(V'\) could be a formula for.
-        Do some quick research: is your speculation correct?
-    </li>
-    <li>
         What is the value of this limit?
         \[\displaystyle \lim_{h \to 0}\frac{(3+h)^{17}-3^{17}}{h}\]
     </li>
@@ -125,11 +139,20 @@
         find a formula for the derivative \((fgh)'\)
         for functions \(f,\) \(g,\) and \(h\).
     </li>
+    <li>
+        You’ve been asked a few times now to
+        <em>find an equation of the line tangent to a curve at a point.</em>
+        Let’s formula-ize this task.
+        Given a general function \(f(x)\),
+        what’s an equation in terms of \(f\) and \(f'\)
+        for the tangent line to the graph
+        \(y = f(x)\) at the point \(\bigl(c,f(c)\bigr)?\)
+    </li>
 </ol>
 
 <h3>Challenges</h3>
 <ol>
-    <li>
+    <li class="screen">
         Consider the piecewise-defined function:
         \[
             j(x) = \begin{cases}
@@ -138,14 +161,6 @@
         \end{cases}\]
         Find the unique pair of values \(a\) and \(b\)
         for which \(j\) is a differentiable function.
-    </li>
-    <li>
-        You’ve been asked a few times now to
-        <em>find an equation of the line tangent to a curve at a point.</em>
-        Let’s formula-ize this task.
-        Given a general function \(f(x)\),
-        what’s an equation for the tangent line to the graph
-        \(y = f(x)\) at the point \((c,f(c))?\)
     </li>
     <li>
         <p>
@@ -176,11 +191,17 @@
         defined by the equation \(y = x^4 - 2x^2 - x\)
         that have a common tangent line.
     </li>
-    <li>
-        What’s a formula for the \(n\)<sup>th</th> derivative of tangent?
+    <li class="screen">
+        Consider the parabola \(y = (x-1)^2+1.\)
+        How many lines are there that pass through the origin
+        and are tangent to this curve,
+        and what are the slopes of those lines?
+    </li>
+    <li class="screen">
+        What’s a formula for the \(n\)<sup>th</sup> derivative of tangent?
         What about secant?
     </li>
-    <li class="hard">
+    <li class="hard screen">
         <p>
         We’ve been taking the <em>power rule</em>,
         the theorem that gives us the formula

@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -23,24 +23,36 @@
 </header>
 
 <main>
-<!--
-<blockquote>
-    Remember that \(\frac{\mathrm{d}y}{\mathrm{d}x}\) 
-    and \(y'\) and \(\dot y\) are all different notation for the same thing.
-</blockquote>
--->
 <ol>
     <li>
         For these implicitly defined functions \(y = f(x)\),
-        solve for \(\frac{\mathrm{d}y}{\mathrm{d}x}\) 
-        (or \(\dot y\), or \(y'\)).
-        \[
-            x + y + xy + y^2 + x^2 = 5
-            \qquad\quad
-            x^3y^3 = \frac{y}{x}
-            \qquad\quad
-            \sin(x)\cos(y)  = \tan(y)x
-        \]
+        find a formula for \(\frac{\mathrm{d}y}{\mathrm{d}x}\) 
+        in terms of \(x\) and \(y.\)
+        Remember that you can also denote
+        \(\frac{\mathrm{d}y}{\mathrm{d}x}\) 
+        as either \(y'\) or as \(\dot y.\)
+        <figure>
+            <div>
+                \(\displaystyle x + y + xy + y^2 + x^2 = 5 \)
+                <figcaption class="squint spoiler">  
+                    \[\frac{\mathrm{d}y}{\mathrm{d}x} = -\frac{2x+y+1}{x+2y+1} \]
+                </figcaption>
+            </div>
+            <div>
+                \(\displaystyle \sin(x)\cos(y)  = \tan(y)x \)
+                <figcaption class="squint spoiler"> 
+                    \[\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{\cos(x)\cos(y) - \tan(y)}{\sin(x)\sin(y) - x\sec^2(y)} \]
+                </figcaption>
+            </div>
+            <div>
+                \(\displaystyle x^3y^3 = \frac{y}{x} \)
+                <figcaption class="squint spoiler"> 
+                    \[\frac{\mathrm{d}y}{\mathrm{d}x} 
+                    = - \frac{y + 3x^4y^3}{x-3x^5y^2}
+                    = -\frac{2y}{x} \]
+                </figcaption>
+            </div>
+        </figure>
     </li>
     <li>
         Consider the curve defined by the equation
@@ -56,93 +68,93 @@
     </li>
     <li>
         <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
-        A ladder \(15\) ft long rests against a vertical wall. 
-        Its top slides down the wall while its bottom 
-        moves away along the level ground at a speed of \(2\)ft/s. 
-        How fast is the angle between the top of the ladder 
-        and the wall changing when the angle is \(\pi/3\) radians?
+        A 15 ft long ladder rests against a vertical wall. 
+        Its top begins sliding down the wall at a speed of 2 ft/s,
+        while its base begins sliding along the ground away from the wall.
+        How fast is the angle between the <em>top</em> of the ladder 
+        and the wall changing at the moment the angle is π/3 radians?
     </li>
     <li>
         <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
         A boat is pulled into a dock by means of a rope 
-        attached to a pulley on the dock. 
-        The rope is attached to the bow of the boat 
-        at a point \(1\)m below the pulley. 
-        If the rope is pulled through the pulley at a rate of \(1\)m/sec,
+        attached to a crank on the dock. 
+        The rope is tethered to a cleat on the bow of the boat 
+        that is one meter below the pulley. 
+        If the rope is reeled into the crank at a rate of one m/s,
         at what rate will the boat be approaching the dock 
-        when \(10\)m of rope is out.
+        the moment there only ten meters of rope out?
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ocf.berkeley.edu/~reinholz/ed/08sp_m160/lectures/derivatives_related_rates.tex">Reinholz</a></h4>
         A police cruiser is chasing a speeding car. 
         The cruiser is headed south towards an intersection.
-        The speeding car has already passed the intersection, heading east. 
-        When the police cruiser is 0.6 mi north of the intersection, 
-        the car is 0.8 mi to the east, 
+        The speeding car has already passed through the intersection, turning left towards the east. 
+        When the police cruiser is still 0.6 miles north of the intersection, 
+        the car is 0.8 miles to the east of it, 
         and the police radar determines that 
-        the distance between them and the car is increasing at 20mph. 
-        If the cruiser is moving at 60mph when this measurement is made, 
+        the distance between their cruiser and the car is increasing at 20 mph. 
+        If the cruiser is cruising at 60 mph when this measurement is made, 
         what is the speed of the car?
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ocf.berkeley.edu/~reinholz/ed/08sp_m160/lectures/derivatives_related_rates.tex">Reinholz</a></h4>
         An oil well located near the middle of a calm, shallow lake 
         is leaking oil onto the surface of the lake 
-        at the rate of 16 cubic feet per minute. 
+        at the rate of 16 ft³ per minute. 
         Since oil and water don’t mix, as the oil leaks onto the surface of the lake 
         it spreads out into a uniform layer, called an oil slick, 
         that floats on top of the water. 
         The slick is circular, centered at the leak, and 0.02 ft thick. 
         Find the rate at which the radius of the slick is increasing 
-        when the radius is 500, and when the radius is 700 ft. 
+        when the radius is 500 ft, and again when the radius is 700 ft. 
         Why would you expect the rates of change of the radii to be different, 
         even though the oil is being added at a constant rate?
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Eberhart</a></h4>
-        A plane is flying at \(500\)mph at an altitude of 3 miles in a direction away from you
-        (i.e. the point on the ground directly beneath
-        the plane is moving away from you). How fast is the plane’s distance from
-        you increasing at the moment when the plane is flying over a point on the
-        ground 4 miles from you?  
+        A plane is flying at 500 mph at an altitude of 3 miles in a direction away from you
+        (i.e. the point on the ground directly beneath the plane is moving away from you). 
+        How fast is the plane’s distance from you increasing 
+        the moment when the plane is flying over a point on the ground four miles from you?  
     </li>
     <li>
         <h4 class="screen"><a href="https://www.whitman.edu/mathematics/calculus_online/section06.02.html">Whitman</a></h4>
-        A \(5\,\mathrm{ft}\) tall woman is walking away from a streetlamp.
-        The bulb of the lamp is \(12\,\mathrm{ft}\) above the ground,
-        and she is walking at about \(3.5\,\mathrm{ft/s}\).
-        At what rate is the tip of her shadow moving?
+        A 5 ft tall woman is walking on a sidewalk away from a streetlamp.
+        The bulb of the lamp is 12 ft above the ground,
+        and she is walking at about 3.5 ft/s.
+        At what speed is the tip of her shadow moving along the sidewalk?
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Eberhart</a></h4>
-        You are inflating a spherical balloon at the rate of seven cm³/sec.  How
-        fast is its radius increasing at the instant when the radius is four centimeters? 
+        You are inflating a spherical balloon at the rate of seven cm³/s.
+        How fast is its radius increasing at the instant when the radius is four centimeters? 
         How fast is the surface area increasing at the same time? 
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Eberhart</a></h4>
-        Water is poured into an inverted cone cup at the rate of \(10\)cm³/sec.
-        The cone has a height of \(30\)cm and a base radius of \(10\)cm.  
-        How fast is the water level rising
-        when the water is \(4\)cm deep (at its deepest)?
+        Water is poured into an inverted cone cup at the rate of 10 cm³/s.
+        The cone has a height of 30 cm and a base radius of 10 cm.
+        How fast is the water level rising when the water depth,
+        from the tip of the cone to the surface of the water, is 4 cm?
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ms.uky.edu/~carl/koblitz/calc1/book/chap12.tex">Eberhart</a></h4>
-        A swing consists of a board at the end of a \(10\) ft long rope.  Think of the
-        board as a point \(P\) at the end of the rope, and let \(Q\) be the point of
-        attachment at the other end.  Suppose that the swing is directly below \(Q\)
-        at time \(t=0\) and is being pushed by someone who walks at the speed of \(6\)
-        ft/sec from left to right.  Find (a) how fast the swing is rising after \(1\)
-        sec; (b) the angular speed of the rope in deg/sec after \(1\) sec.
+        A swing consists of a board at the end of a 10 ft long rope.
+        Think of the board as a point \(P\) at the end of the rope,
+        and let \(Q\) be the point of attachment at the other end.
+        Suppose that the swing is directly below \(Q\) at time \(t=0\) 
+        and is being pushed by someone who walks at the speed of 6 ft/s from left to right.
+        Find (a) the speed the swing is rising after one second
+        and (b) the angular speed of the rope in radians-per-second after one second.
     </li>
     <li>
         <h4 class="screen"><a href="https://people.math.harvard.edu/~knill/teaching/math1a_2014/handouts/35-relatedrates.pdf">Knill</a></h4>
         The ideal gas law \(pV = T\) relates pressure \(p\) and 
         volume \(V\) and temperature \(T\). Assume the temperature
         \(T = 50\) is fixed and \(\dot V=-5\). Find the rate \(\dot p\) with
-        which the pressure increases when \(V = 10\) and \(p= 5\).
+        which the pressure increases when \(V = 10\) and \(p= 5.\)
     </li>
-    <li>
+    <li class="screen">
         <h4 class="screen"><a href="https://people.math.harvard.edu/~knill/teaching/math1a_2014/handouts/35-relatedrates.pdf">Knill</a></h4>
         There are cosmological models which see our universe
         as a four dimensional sphere which expands in space
@@ -156,15 +168,14 @@
 <ol>
     <li>
         <h4 class="screen"><a href="https://math.berkeley.edu/~peyam/Math1AFa13/Handouts/Harder%20Optimization%20and%20Related%20Rates.pdf">Tabrizian</a></h4>
-        Suppose that the minute hand of a clock is 15 mm long and the hour hand is
-        12 mm. How fast is the distance between the hour hand and the minute hand
-        changing at 2 pm?
+        Suppose that the minute hand of a clock is 15 mm long and the hour hand is 12 mm. 
+        How fast is the distance between the hour hand and the minute hand changing at 2 pm?
     </li>
     <li>
         <h4 class="screen"><a href="https://math.berkeley.edu/~peyam/Math1AFa13/Handouts/Harder%20Optimization%20and%20Related%20Rates.pdf">Tabrizian</a></h4>
-        A water tank has the shape of a horizontal cylinder with radius \(1\) and length \(2\).
-        If water is being pumped into the tank at a rate of \(\frac 1 6\) m³ per minute, find the
-        rate at which the water level is rising when the water is \(\frac 1 2\)  m deep.
+        A tiny water tank has the shape of a horizontal cylinder with radius 1” and length 2”.
+        If water is being pumped into the tank at a rate of ⅙ mm³ per hour, 
+        find the rate at which the water level is rising when the water is ½ mm deep.
     </li>
 </ol>
 

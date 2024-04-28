@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -28,30 +28,13 @@
     don’t ask for an <em>exact</em> (true) answer,
     but instead an <em>approximation</em>.
     Try to keep your approximations accurate 
-    to within \(10^{-3}\) of the true answer.
+    to within one-thousandth of the true answer.
 </p>
 <ol>
     <li>
-        A person wearing a pedometer tracks the number 
-        of steps they’ve taken today.
+        Morpheus is wearing a pedometer tracks the number 
+        of steps he’s taken today.
         <figure>
-            <!--
-        <table>
-        <thead>
-            <tr> <th>Time</th> <th>Steps</th> </tr>
-        </thead>
-        <tbody>
-            <tr> <td>6am</td> <td>0</td> </tr>
-            <tr> <td>8am</td> <td>531</td> </tr>
-            <tr> <td>10am</td> <td>3441</td> </tr>
-            <tr> <td>Noon</td> <td>5590</td> </tr>
-            <tr> <td>3pm</td> <td>6013</td> </tr>
-            <tr> <td>5pm</td> <td>6778</td> </tr>
-            <tr> <td>8pm</td> <td>11340</td> </tr>
-            <tr> <td>10pm</td> <td>12019</td> </tr>
-        </tbody>
-        </table>
-            -->
         <table>
         <tbody>
             <tr> 
@@ -79,29 +62,29 @@
         </tbody>
         </table>
         </figure>
-        First, briskly sketch a plot of this data
-        with your independent variable \(x\) 
+        First, briskly sketch a scatterplot of this data
+        with your independent variable \(t\) 
         measured in hours since 6am.
         <ol>
             <li>
-                On average, how many steps per hour
-                did the person take today?
+                On average, how many steps-per-hour
+                did Morpheus take today?
             </li>
             <li>
-                On average, how many steps per hour
-                did the person take in the morning?
-                On average, how many steps per hour
-                did the person take in the afternoon?
+                On average, how many steps-per-hour
+                did Morpheus take this morning
+                between 6am and noon?
             </li>
             <li>
                 In your plot, what is the slope 
                 of the secant line between the points
                 corresponding to 8am and 3pm?
-                What is the meaning of this slope in context?
+                What is the meaning of this slope 
+                in context of the situation?
             </li>
             <li>
                 If this person asked you to look at this data
-                and to determine you how fast they were walking (steps/hr)
+                and to tell them you how fast they were walking (steps/hr)
                 at <em>exactly</em> 5pm, how would you estimate this?
                 Note: we can’t <em>know</em> this only from this data,
                 so your task is only to make an informed estimation.
@@ -109,13 +92,21 @@
         </ol>
     </li>
     <li>
+        <p>
         A particle moves back and forth along a straight line.
         After designating a point along its path as the origin,
+        declaring that location to be <em>position zero</em>,
         you begin observing the particle at time \(t=0\) and surmise
-        that the distance, in miles, the particle is from the origin 
+        that the distance, in miles, 
+        the particle is from the origin after \(t\) seconds
         is given by the function
-        \[f(t) = \cos\left(t^2-3t+1\right) \,.\]
+        </p>
+        <figure>
+            <div> \(\displaystyle f(t) = \cos\bigl(t^2-3t+1\bigr) \,.\) </div>
+        </figure>
+        <aside>
         Note: the cosine function expects an argument in radian measure.
+        </aside>
         <ol>
             <li>
                 Approximately, 
@@ -133,20 +124,24 @@
         </ol>
     </li>
     <li>
-        Approximately what is the slope of the line 
-        tangent to the curve \(y = \sqrt{x}\tan(x)\) at \(x=3\)?
+        Approximately, what is the slope of the line 
+        tangent to the curve \(y = \sqrt{x}\tan(x)\) 
+        at the point where \(x=3?\)
     </li>
     <li>
-        A child on the roof of the Empire State Building 
+        A small child on the roof of the Empire State Building 
         hurls a penny towards the city streets below. 
         The height of the penny after \(t\) seconds,
         willfully ignoring air resistance,
         can be fairly accurately modelled by the function
-        \[f(t) = 1250 - 42t - 5t^2\,.\]
+        <figure>
+            <div> \(\displaystyle f(t) = 1250 - 42t - 5t^2\,.\) </div>
+        </figure>
         <ol>
             <li>
                 According to this model, 
-                approximately how long before the penny hits the ground?
+                approximately how long does it take 
+                for the penny to hit the ground?
             </li>
             <li>
                 According to this model, 
@@ -161,7 +156,9 @@
         for any time \(t\) between zero and ten seconds 
         after it started a pass, and that model for the distance 
         is given by a function \(f\) of time as
-        \[ d \;=\; f(t) = t^3 + 32t\,. \]
+        <figure>
+            <div> \(\displaystyle d \;=\; f(t) = t^3+32t\,.\) </div>
+        </figure>
         <ol>
             <li>
                 Approximately how fast was the dragster going 

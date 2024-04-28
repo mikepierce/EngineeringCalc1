@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style>@media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -24,7 +24,7 @@
 
 <main>
 <ol>
-    <li>
+    <li class="skip-page">
         <p>
         For any positive number \(N,\)
         here is a simple method for approximating 
@@ -51,32 +51,31 @@
             <li>
                 Show that this formula 
                 is the same as the “next guess” formula
-                that results from applying Newton’s method
+                that results would result from applying Newton’s method
                 to approximate a solution of the equation \(x^2-N=0,\)
-                hence justifying why the Babylonian method 
-                of approximating \(\sqrt{N}\) works.
+                hence justifying why this Babylonian method works.
             </li>
             <li class="hard">
                 Write a computer program 
                 that iteratively applies this formula 
                 to calculate the square root of a number. 
-                (Note: the TI-83/84+ series of calculators are programmable.)
+                Note: a TI-83/84+ calculators is programmable.
             </li>
             <li class="hard">
                 Using this formula, 
                 write a recursive computer program 
                 that calculates the square root
                 of a number accurate to the precision
-                of the language’s <code>float</code> data type.
+                of the language’s analogue of 
+                the <code>float</code> data type.
             </li>
-            <li>
+            <li class="hard">
                 Come up with similar recursive formulas
                 for the following operations:
-                \[
-                    \sqrt[3]{x}
-                    \qquad \qquad \qquad \qquad \qquad
-                    \frac{1}{x}
-                \]
+                <figure>
+                    <div>\(\displaystyle \sqrt[3]{x} \) </div>
+                    <div>\(\displaystyle \frac{1}{x} \) </div>
+                </figure>
                 <aside>
                     It can be tough to figure out
                     the one for \(\frac{1}{x}\).
@@ -87,7 +86,7 @@
             </li>
         </ol>
     </li>
-    <li>
+    <li class="screen">
         The equation \(\cos(x) = x\) has a single solution.
         We call it the
         <a href="https://mathworld.wolfram.com/DottieNumber.html">Dottie Number</a>.

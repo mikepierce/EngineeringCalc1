@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -33,35 +33,36 @@
         the graphs of these functions?
         \[f(x) = 4-(x+1)^2 \quad\text{and}\quad g(x) = (x-3)^2+2\]
     </li>
+
+    <!-- I should really put some easier stuff here, where the derivative is a simple quadratic -->
+    <!-- I should also put some “trick questions” where the min/max occurs at infy -->
+
     <li>
         <h4 class="screen"><a href="https://tutorial.math.lamar.edu/classes/calci/optimization.aspx">Dawkins</a></h4>
         We want to construct a box whose base length is three times the base width. 
         The material used to build the top and bottom cost $10/ft² 
         and the material used to build the sides cost $6/ft². 
-        If the box must have a volume of \(50\)ft³ 
-        determine the dimensions that will minimize the cost to build the box.
+        If the box must have a volume of 50 ft³, determine the dimensions 
+        that will minimize the cost to build the box.
     </li>
     <li>
         <h4 class="screen"><a href="https://tutorial.math.lamar.edu/classes/calci/optimization.aspx">Dawkins</a></h4>
         A manufacturer needs to make a cylindrical can 
-        that will hold \(12 \mathrm{fl oz}\) of cream soda.
+        that will hold 12 fl oz of cream soda.
         Determine the dimensions of the can that will
         minimize the amount of material used in its construction.
-        (Recall that for food products in the US,
-        \(1 \mathrm{fl oz} \approx 30 \mathrm{ml}\), 
-        which as a volume corresponds to 30 \mathrm{cm}^3\)).
+        (Recall that for food products in the US, 1 fl oz ≈ 30 ml, 
+        which as a volume corresponds to 30 cm³.)
     </li>
-    <!--
-    <li>
+    <li class="screen">
         <h4 class="screen"><a title="Exercise 5.8.3" href="https://www.sfu.ca/math-coursenotes/Math%20157%20Course%20Notes/sec_Optimization.html">SFU</a></h4>
         Over a time period of five years, it is shown that the number
         \(N\) of independently owned bakeries is given by
-        \[ N(t)=2+8.82t-7.73t^2+2.08t^3-0.175t^4 \ \ \ 0\leq t \leq 5 \]
+        \[ N(t)=2+8.82t-7.73t^2+2.08t^3-0.175t^4 \quad 0\leq t \leq 5 \]
         (in millions of bakeries). 
         Determine the absolute extrema of the function
         \(N\) on the interval \([0,5]\) and interpret your results.
     </li>
-    -->
     <li>
         A <em>Norman window</em> has a shape 
         of a rectangle surmounted by a semicircle —
@@ -106,7 +107,7 @@
     </li>
     <li>
         <h4 class="screen"><a href="http://faculty.ung.edu/jallagan/Courses%20materials/Math%201450%20Calculus%201/Syllabus%20and%20ebook/problems%20and%20solutions%20for%20calculus%201.pdf">Jungic, Menz, Pyke</a></h4>
-        With a straight piece of wire 4m long, you are to create 
+        With a straight piece of wire 4 m long, you are to create 
         an equilateral triangle and a square, or either one only. 
         Suppose a piece of length \(x\) meters is bent into triangle 
         and the reminder is bent into a square. 
@@ -126,7 +127,7 @@
     </li>
     <li>
         <h4 class="screen"><a href="https://www.ocf.berkeley.edu/~reinholz/ed/08sp_m160/lectures/derivatives_related_rates.tex">Reinholz</a></h4>
-        Find the equation of the line through \((2,4)\) 
+        Find the equation of the line through the point \((2,4)\) 
         that cuts off the least area from the first quadrant.
     </li>
 </ol>
@@ -138,7 +139,7 @@
         If \(m\) and \(n\) are positive integers, 
         find the maximum value of \(f(x) = x^m(1-x)^n.\)
     </li>
-    <li>
+    <li class="screen">
         <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
         If the tangent line at a point \(P\) on the curve \(y = x^3\) 
         intersects the curve again at \(Q\), 
@@ -148,15 +149,13 @@
         defined the same way but starting with \(Q\) instead of \(P.\)
         What is the relationship between \(A\) and \(B?\)
     </li>
-    <!--
-    <li>
+    <li class="screen">
         <h4 class="screen">Stewart</h4>
-        An isosceles triangle is circumscribed about the unit circle so that the equal sides meet at the
-        point \((0,a)\) on the \(y\)-axis (see the figure). 
-        Find the value of a that minimizes the lengths of the equal sides.
+        An isosceles triangle is circumscribed about a unit circle 
+        so that the equal sides meet at the point \((a,0)\) on the \(x\)-axis. 
+        Find the value of \(a\) that minimizes the lengths of the equal sides.
         <figure> <img width="423" src="img/opt-circletriangle.png"> </figure>
     </li>
-    -->
     <li>
         <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
         The line \(y = mx + b\) intersects the parabola \(y = x^2\) 
@@ -171,8 +170,7 @@
         and the pipe <em>didn’t</em> have to be held perfectly level.
         What is the longest the pipe could possibly be to make this turn?
     </li>
-    <!--
-    <li>
+    <li class="screen">
         <h4 class="screen"><a href="https://www.stewartcalculus.com/data/CALCULUS%20Concepts%20and%20Contexts/upfiles/WebChallengeProblems_3C3.pdf">James Stewart</a></h4>
         Suppose we are planning to make a taco 
         from a round tortilla with diameter 8 inches 
@@ -202,7 +200,6 @@
             </li>
         </ol>
     </li>
-    -->
 </ol>
 </main>
 </body>

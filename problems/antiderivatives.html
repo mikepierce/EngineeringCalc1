@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;} } </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -38,9 +38,7 @@
         write down the formula for 
         <em>an</em> antiderivative of that function.
         Note you can always check your antiderivative 
-        by taking its derivative,
-        which you can in-turn check with
-        <a href="https://www.wolframalpha.com/">WolframAlpha</a>.
+        by taking its derivative.
         <figure>
             <div> \( a'(x) = 124x^{123}\) </div>
             <div> \( b'(x) = x^{421}\) </div>
@@ -60,11 +58,9 @@
         <p>
         We denote the \(n^\text{th}\) derivative 
         of a function \(f\) as \(f^{(n)}.\)
-        For example, \(f^{(13)}(x)\) is the thirteenth derivative of \(f,\)
-        and is better notation than \(f'''''''''''''(x)\) 
-        for the thirteenth derivative
-        </p>
-        <p>
+        For example, \(f^{(13)}(x)\) is the thirteenth derivative of \(f.\)
+        <!-- and is better notation than \(f'''''''''''''(x)\) 
+        for the thirteenth derivative -->
         Given \({f^{(5)}(x) = 12x+1}\)
         write down a possible formula for \(f(x).\)
         </p>
@@ -186,7 +182,7 @@
         Using a similar “number arrangement” argument, prove that
         \[ 1^2+2^2+3^2+4^2+\dotsb+n^2 = \frac{n(n+1)(2n+1)}{6}\,. \]
         </p>
-        <p>
+        <aside>
         Hint: Recall that \(n^2\) is the area 
         of an \({n \times n}\) square.
         Your “number arrangement” might need more dimensions
@@ -196,7 +192,7 @@
         … there are multiple ways to prove this,
         so don’t think that you <em>need</em> 
         to use all/any of these facts.
-        </p>
+        </aside>
     </li>
 </ol>
 

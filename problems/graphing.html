@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <style> @media only print { body {margin:0.25in 1.1in 0.25in 1.1in; width:auto; font-size:12pt;} main {column-count:1;} h1 {font-size:2em;}} </style>
+    <style media="print">@page {size:letter; margin:1in 1.5in 0.75in 1.5in;}</style>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
@@ -157,7 +157,7 @@
                 <!-- False -->
             </li>
             <li>
-                For a differentiable function \(f\) that unbounded above
+                For a differentiable function \(f\) that is unbounded above
                 (i.e. the outputs of \(f\) are arbitrarily large),
                 the derivative \(f'\) will also be unbounded above.
                 <!-- False: sqrt or log -->
@@ -176,10 +176,10 @@
     </li>
     <li>
         Here are the graphs of a couple of functions.
-        For each of these functions´ graphs,
+        For each of these functions’ graphs,
         sketch the graph of the derivative of the function
         on the same set of axes.
-        Also draw a small square over every point \((x, f(x))\) 
+        Also draw a small square over every point \(\bigl(x, f(x)\bigr)\) 
         where \(f''(x) = 0.\)
         <figure> <img width="864" src="img/f1.png"> </figure>
         <figure> <img width="864" src="img/f2.png"> </figure>
@@ -198,7 +198,7 @@
     </li>
     <li>
         What’s an equation for the unique quadratic polynomial function 
-        \(f\) such that \(f(3) = f'(3) = f''(x) = 3?\) 
+        \(f\) such that \(f(3) = f'(3) = f''(3) = 3?\) 
     </li>
     <li>
         What’s an equation for the unique quadratic polynomial function
@@ -229,8 +229,10 @@
         <aside>
             Hint 1: Appeal to the Intermediate Value Theorem
             to argue it has <em>at least</em> one zero.
+        <aside>
+        </aside>
             Hint 2: Appeal to the Mean Value Theorem
-            to argue it <em>doesn't have</em> at least two zeros.
+            to argue it <em>doesn't</em> have at any more.
         </aside>
     </li>
 </ol>
