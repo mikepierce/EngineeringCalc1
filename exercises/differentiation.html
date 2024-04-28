@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Math135 Basic Differentiation Exercises | Mike Pierce</title>
+    <meta name="author" content="Mike Pierce">
+
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");} blockquote .katex {font-size: 0.833em;}</style>
+    <style> .squint {visibility:hidden;} .spoiler {visibility:hidden;} </style>
+</head>
+
+<body>
+<header>
+    <h1>Differentiating Algebraic and Trigonometric Functions</h1>
+</header>
+
+<main>
+<blockquote>
+<figure>
+    <div> \(\displaystyle \bigl( k f\bigr)' = kf' \text{ for } k \in \mathbf{R}\)</div>
+    <div> \(\displaystyle \bigl( f \pm g \bigr)' = f' \pm g' \) </div>
+    <div> \(\displaystyle \bigl( f \circ g \bigr)' = \bigl(f'\circ g\bigr)(g') \) </div>
+</figure>
+<figure>
+    <div> \(\displaystyle \bigl( f  g \bigr)' = f'g + fg' \) </div>
+    <div> \(\displaystyle \biggl( \frac{f}{g} \biggr)' = \frac{f'g - fg'}{g^2} \) </div>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(x^n\bigr) = nx^{n-1} \text{ for } n\neq 0\) </div>
+</figure>
+<figure>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\sin(x)\bigr) = \cos(x) \) </div>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\sec(x)\bigr) = \sec(x)\tan(x) \) </div>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\tan(x)\bigr) = \sec^2(x) \) </div>
+</figure>
+<figure>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\cos(x)\bigr) = -\sin(x) \) </div>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\csc(x)\bigr) = -\csc(x)\cot(x) \) </div>
+    <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\cot(x)\bigr) = -\csc^2(x) \) </div>
+</figure>
+</blockquote>
+<p>
+    Each of the following expressions of a variable \(x\)
+    can be thought of as the formula for a real-valued function
+    that’s continuous on some open subset of \(\mathbf{R}.\)
+    As exercise, for each of these functions,
+    write down a formula for its derivative.
+    <!--
+    <span class="screen">
+        Hovering over the blurry region under an expression with your mouse will reveal a formula for the derivative.
+    </span>
+    <span class="print">
+        Under each expression is a formula for its derivative.
+        To exercise effectively I recommend you copy the expression onto separate paper,
+        and initially refrain from looking at its derivative.
+    </span>
+    -->
+</p>
+<figure>
+    <div> 
+        \(\displaystyle 17x^2-2 \) 
+        <figcaption class="squint spoiler"> \(\displaystyle 34x \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle x^{17} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{1}{x^{17}} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sqrt[17]{x} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{1}{17}+\frac{1}{x} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle 17x^{\pi}\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{1}{\pi}\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle x^3+x^2+x+1+\frac{1}{x}+\frac{1}{x^2}+\frac{1}{x^3}\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \bigl(x-17\bigr)^2 \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \bigl(x-17^2\bigr) \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \bigl(x-2\bigr)^{17} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \Bigl(17x-2\Bigr)^{17} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \Bigl(17x^2-2\Bigr)^{17} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \Bigl(17x^2-2\Bigr)\Bigl(x^{17}-17x+2\Bigr) \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{17x^2-2}{x^{17}-17x+2} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{1}{1+\frac{1}{x}} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sqrt[5]{\sqrt[3]{\sqrt{x}}} \) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle 50\sin(x) + 15\cos(x)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle 150\sin(x)\cos(x)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sin\bigl(\cos(x)\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle 2\sin^2(x)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sec\Bigl(x^{17}-x\Bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \csc\bigl(\sqrt{7x-1}\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sqrt{\cot(x)}\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \tan\bigl(\sin(x)\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \tan^{17}\bigl(\sec(x)\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \tan(2x)\csc(17x)+1\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{\tan(2x)}{1+\csc(17x)}\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{1}{1+\frac{1}{\tan(17x)}}\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \tan\bigl(\tan(x)\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \csc\bigl(\csc(x)\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sec\bigl(\sin(x)\tan(x)\bigr)\) 
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle x^{17}\cot^{17}(x) \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \frac{\sqrt{x^{17}}}{\cot^{17}(x)} \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \biggl(\frac{\sqrt{x}}{\sec(x)}\biggr)^{17} \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \tan\Bigl(\cos\bigl(\cos(x)\bigr)\Bigr) \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sin\Bigl(\sec\bigl(\sec(x)\bigr)\Bigr) \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sin\bigl(\sec^{17}(x)\tan^{71}(x)\bigr) \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+    <div> 
+        \(\displaystyle \sin\biggl(\frac{\sin^2(x)+\cos^2(x)}{\tan^2(x)+1}\biggr) \)
+        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
+    </div>
+</figure>
+</main>
+</body>
+
+</html>
+
