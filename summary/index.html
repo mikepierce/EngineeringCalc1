@@ -7,12 +7,20 @@
     <title>Math135 Engineering Calc I Summary | Mike Pierce</title>
     <meta name="author" content="Mike Pierce">
 
+    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.css" integrity="sha384-zTROYFVGOfTw7JV7KUu8udsvW2fx4lWOsCEDqhBreBwlHI4ioVRtmIvEThzJHGET" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css"/>
+    <style media="print">
+        @page {size:letter; margin:0.4in 0.4in 0.4in 0.4in;}
+        h1 {font-size:32pt;} 
+        h2 {font-size:24pt; margin-top:18pt;} 
+        h3 {font-size:12pt;} 
+        body {font-size:9pt; line-height:12pt;} 
+        main {column-count:2; column-gap:0.2in; column-fill:auto;}
+    </style>
+    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
-    <link rel="shortcut icon" type="image/png" href="../../assets/favicon.png"/>
-    <link rel="stylesheet" type="text/css" media="all" href="../../assets/main.css"/>
-    <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");}</style>
 </head>
 
 <header>
@@ -20,8 +28,7 @@
 <ul>
     <li> <a href="../..">Mike Pierce</a> </li>
     <li> Math135 </li>
-    <li class="screen"> <a href="..">Course Outline</a> </li>
-    <li class="screen"> <a href="https://github.com/mikepierce/Outline-EngineeringCalc1">Fork on GitHub</a> </li>
+    <li class="screen"> <a href=".."> ⭦Course Outline</a> </li>
     <li class="print"> Hosted at <a class="url" href="https://org.coloradomesa.edu/~mapierce2/135/summary">coloradomesa.edu/~mapierce2/135/summary</a> </li>
 </ul>
 </header>
@@ -38,8 +45,9 @@
     for the sake of keeping both student and instructor 
     focused on what’s important.
 </p>
+
 <section>
-<h2>Limits &amp; Continuity</h2>
+<h2 id="limits-continuity">Limits &amp; Continuity</h2>
 <p>
     In the beginning of the story of calculus
     there are some minor characters we must meet.
@@ -59,7 +67,8 @@
         what the notation
         \( \lim_{x \to x_0^+} f(x) \) 
         and \( \lim_{x \to x_0^-} f(x) \) means,
-        and what it means if \(x_0\) is replaced by \(\pm\infty.\)
+        and what it means if \(x_0\) is replaced by \(\pm\infty\)
+        in any of those expressions.
     </li>
     <li>
         <!-- SLO: Determine limits of functions graphically, numerically, and algebraically -->
@@ -78,16 +87,16 @@
     instead of directly at the point.
     While discussing the purpose of the course,
     we’ll gradually reveal the limit’s relationship to the derivative
-    and how it can help us find the slope
+    and how it can be used to calculate the slope
     of a line tangent to a curve at a given point.
 </p>
 <p>
-    The other of minor character
+    The other minor character
     is the concept of <em>continuity</em> of a function.
-    Explicitly we’ll say a function \(f\) in continuous at a point \(x_0\)
+    Explicitly we’ll say a function \(f\) is continuous at a point \(x_0\)
     if \(f(x_0) = \lim_{x \to x_0} f(x) \),
     and continuous on a domain if it’s continuous 
-    at all point in that domain.
+    at all points in that domain.
     It’s more important though 
     to understand what continuity means conceptually.
 </p>
@@ -107,16 +116,17 @@
     on some domain as a formula,
     if we take as an hypothesis that the function 
     is continuous on that domain;
-    continuity is a crucial hypothesis moving forward.
+    continuity is a crucially necessary moving forward.
 </p>
 </section>
 
 <section>
-<h2>Differentiation</h2>
+<h2 id="differentiation">Differentiation</h2>
 <p>
     Since learning the language of limits
     and the idea of continuity of functions,
-    we now have all we need to define the <em>derivative</em> of a function
+    we now have all we need 
+    to define the <em>derivative</em> of a function
     and will immediately discuss two important things:
 </p>
 <ul>
@@ -125,7 +135,7 @@
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Concept</h4>
         Know and understand the definition of the derivative of 
-        a real-valued function, 
+        a real-valued function, defined as
         \[
         \frac{\mathrm{d}}{\mathrm{d}x}f(x) 
         = \lim\limits_{h \to 0} \frac{f(x+h) - f(x)}{h}\,,
@@ -140,9 +150,10 @@
     <li>
         <!-- SLO: Calculate derivatives by a variety of techniques -->
         <h4>Skill</h4>
-        Be able to write a formula for the derivative of any function 
-        expressed in terms of rational functions, trigonometric functions, 
-        or power functions (e.g. square roots, etc).  
+        Be able to write a formula for the derivative 
+        of any function defined in terms of 
+        sums, products, quotients, or composites of 
+        algebraic and trigonometric functions.
     </li>
 </ul>
 <p>
@@ -154,28 +165,30 @@
     Sometimes those exercises are accompanied by solutions, 
     but if they’re not a symbolic computer algebra system (CAS)
     can calculate the derivative of a function defined by a formula.
-    For example, <a title="Wolfram|Alpha" href="https://www.wolframalpha.com/calculators/derivative-calculator/">Wolfram|Alpha can calculate derivatives</a>.
+    <!-- For example, <a title="Wolfram|Alpha" href="https://www.wolframalpha.com/calculators/derivative-calculator/">Wolfram|Alpha can calculate derivatives</a>.-->
     A word of caution though: 
     the expectation is that <em>you</em> can compute derivatives. 
-    Only let a computer be your aid, not your crutch—hopefully 
-    similar to the relationship you have with your calculator.
+    Let a computer be your aid, not your crutch — like 
+    the relationship you have with your graphing calculator.
 </p>
 <p>
-    Once you are comfortable taking derivatives of functions \(y = f(x)\) 
-    where the effect the independent variable \(x\), 
-    the variable you’re differentiating with respect to,
-    has on a dependent variable \(y\) is made <em>explicit</em>
-    you’ll need to extend this skill,
-    applying it to equations where the relationship between \(x\) 
-    and any independent variables is only <em>implicit</em>.
+    After you’re comfortable taking derivatives 
+    of functions \(f\) — where the output \(y = f(x)\)
+    may be thought of as a variable <em>explicitly</em> dependent
+    on the independent input variable \(x,\) 
+    the variable you’re differentiating with respect to —
+    you’ll need to extend this skill, and apply it to 
+    equations where the relationship between \(x,\)\(y\) 
+    and other variables is only <em>implicit</em>.
 </p>
 <ul>
     <li>
         <!-- SLO: Calculate derivatives by a variety of techniques -->
         <h4>Skill</h4>
-        Be able to <em>implicitly differentiate</em> any equation 
-        involving rational expressions, trigonometric expressions, 
-        or power terms (e.g. square roots, etc)
+        Be able to <em>implicitly differentiate</em> 
+        any equation involving 
+        sums, products, quotients, or composites of 
+        algebraic and trigonometric functions
         with respect to any variable in that equation.
     </li>
 </ul>
@@ -183,7 +196,7 @@
     Just like with explicit differentiation, 
     there are plenty of exercises and worked-out examples online,
     and you can compare your computations with 
-    <a title="Wolfram|Alpha implicit differentiation example" href="https://www.wolframalpha.com/input?i=implicit+differentiation+for+ye%5Ex%3Dx-y">Wolfram|Alpha’s</a>. 
+    the output of a CAS.
 </p>
 <p>
     In class we’ll spend time thinking about the graphs of functions,
@@ -196,7 +209,8 @@
     between a function and its derivative.
 </p>
 <p>
-    There are three important uses of differentiation we’ll talk about.
+    There are three important uses of differentiation 
+    we’ll talk about.
 </p>
 <ul>
     <li>
@@ -229,10 +243,11 @@
     The first of these will require you 
     to be adept at implicit differentiation.
     The second will simply be an extension of a skill that
-    you’ve already practiced before in math class.
+    you’ve already practiced before in math class:
+    calculating zeros of functions.
     Both of these will require that you be comfortable
     synthesizing mathematical equations and relationships
-    from a concrete situation.
+    from a given situation.
     And luckily both of these topics are well documented on the internet;
     you way want to append the phrases <q>calculus 1</q> or <q>single variable</q>
     to your search phrases though.
@@ -248,8 +263,8 @@
         <p>
         Perform <a title="Paul’s Online Notes: Newton’s Method" href="https://tutorial.math.lamar.edu/classes/calci/newtonsmethod.aspx">Newton’s method</a> 
         to numerically approximate the solution to an equation,
-        and understand generally how lines 
-        can be used to approximate curves.
+        and, more generally speaking, 
+        understand how lines can be used to approximate curves.
         </p>
     </li>
 </ul>
@@ -259,23 +274,20 @@
     the goal here is <em>familiarity</em>, not <em>fluency</em>,
     so that one day you could implement it with a computer if you need to.
     If you’re practicing computer programming while taking this class though,
-    you might as well implement it now.
-</p>
-<p>
-    In the next segment of this class 
-    we’ll begin to explore differentiation’s dual operation: integration.
+    now would be a fine time to implement it.
 </p>
 </section>
 
 <section>
-<h2>Integration Basics</h2>
+<h2 id="integration">Integration Basics</h2>
 <p>
-Now that we know basically everything about differentiation,
-it’s time to turn our attention to the other side 
-of the story of calculus: integration.
-First we’ll surmount two conceptual hurdles,
-understanding what integration <em>is</em>
-and how it relates to differentiation.
+    Now that we know basically everything about differentiation,
+    it’s time to turn our attention to the other protagonist
+    in the story of calculus, integration.
+    Doing this we must immediately surmount two conceptual hurdles:
+    we must define and understand a <em>definite integral</em>,
+    and we must flush out how integration is dual —
+    in a sense a foil — to the operation of differentiation.
 </p>
 <ul>
     <li>
@@ -300,7 +312,8 @@ and how it relates to differentiation.
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Concept</h4>
         Understand that a definite integral is defined 
-        as the limit of a <em>Riemann sum</em> 
+        as the limit of a <em>Riemann sum</em> —
+        any kind of Riemann sum —
         as the number of summands approaches infinity.
         E.g.
         \[
@@ -314,26 +327,28 @@ and how it relates to differentiation.
         <!-- SLO: Describe properties and behavior of functions using limits, derivatives, and integrals -->
         <h4>Concept</h4>
         Have a <em>working</em> understanding of 
-        the fundamental theorem of calculus,
-        knowing abstractly that differentiation 
-        and integration are “inverse” operations,
-        and knowing concretely that
+        the Fundamental Theorem of Calculus,
+        knowing abstractly that differentiation and integration 
+        are “inverse” operations that “undo” each other,
+        and knowing concretely that this relationship
+        is captured by these two equations:
         \[
             \newcommand{\ddt}{\frac{\mathrm{d}}{\mathrm{d}t}}
             \ddt \int\limits_a^t f = f(t)
-            \quad\text{and}\quad
+            \quad\text{ and }\quad
             \int\limits_a^b \ddt f(t) \;\mathrm{d}t = f(b) - f(a)
             \,.
         \]
     </li>
 </ul>
 <p>
-    Knowing these two concepts are the core
-    to being <em>fluent</em> in the language of calculus.
-    It’s important to understand what \(\int\) 
-    means if encountered outside of math class,
-    and to be able to comfortably work with it in calculations.
-    After internalizing these core concepts, 
+    Knowing these two parts of 
+    the Fundamental Theorem of Calculus is at the core
+    of being fluent in the language of integral calculus.
+    It’s important to both understand what \(\int\) 
+    means when encountered outside of math class,
+    and to be able to comfortably work with \(\int\) in calculations.
+    After internalizing these concepts, 
     there is a skill that the second equation
     of the fundamental theorem of calculus demands we practice.
 </p>
@@ -346,6 +361,8 @@ and how it relates to differentiation.
         I.e. given a formula for a function’s derivative
         \(\frac{\mathrm{d}}{\mathrm{d}t}f\),
         figure out a formula for \(f\).
+        Also know that the <em>indefinite integral</em> of a function
+        simple refers to the family of all its antiderivatives.
     </li>
 </ul>
 <p>
@@ -370,12 +387,19 @@ and how it relates to differentiation.
     \]
     And then we’ll talk about the method of 
     <a href="https://en.wikipedia.org/wiki/Integration_by_substitution">substitution</a>,
-    a method of undoing the chain rule.
+    a means of undoing the chain rule,
+    which is encapsulated in by this formula:
+    \[
+        \int f'\bigl(g(x)\bigr)\,g'(x) \;\mathrm{d}x
+        = f\bigl(g(x)\bigr) + C
+    \]
+    <!--
     When searching the internet for integration exercises
     be sure to include the keyword <q>substitution</q>
     to avoid exercises you are not ready for.
     And when practicing, you can check your calculations with
     <a href="https://www.wolframalpha.com/calculators/integral-calculator/">Wolfram|Alpha</a>
+    -->
 </p>
 <p>
     Once this skill is developed we’ll talk about 
@@ -411,11 +435,10 @@ and how it relates to differentiation.
 <p>
     Each of these require the understanding of an integral 
     as an accumulation of something.
-    The first two are applications of integration to geometry,
-    which feels insincere as an “application”,
-    but provides good practice of your spatial reasoning.
-    The latter one though exemplifies calculus’ utility
-    to science as a whole.
+    The first two are applications of integration to geometry
+    and provide good practice of your spatial reasoning.
+    The latter one exemplifies calculus’ utility
+    within the study of physics, and science overall.
 </p>
 <p>
     And that’s it! 
@@ -423,7 +446,7 @@ and how it relates to differentiation.
     In the sequel to this class we’ll 
     discuss the calculus of exponential and logarithmic functions,
     dive deeper into techniques of evaluating indefinite integrals,
-    learning to calculate the sum of infinitely many numbers,
+    learn to calculate the sum of infinitely many numbers,
     and finally we’ll culminate the story of single-variable calculus
     by learning that 
     <a title="Wikipedia: Taylors Theorem" href="https://en.wikipedia.org/wiki/Taylor's_theorem">every infinitely differentiable function can be considered as the limit of a sequence of polynomial functions</a>.
@@ -434,8 +457,7 @@ and how it relates to differentiation.
 <footer>
 <ul>
     <li> © <a href="https://org.coloradomesa.edu/~mapierce2/">Mike Pierce</a> </li>
-    <li> <a href="https://www.coloradomesa.edu/math-stat">CMU Math</a> </li>
-    <li> License <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
+    <li> HTML/Content License <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></li>
 </ul>
 </footer>
 
