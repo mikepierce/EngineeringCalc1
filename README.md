@@ -4,8 +4,8 @@ This repo contains the HTML source of the materials for my
 for my ~16 week first-semester calculus course
 designed for an class of prospective engineers.
 Within each section are links to notes, video lectures, 
-technology guides, demonstrations in Desmos,
-problem sets, and past exams.
+technology guides, demonstrations,
+practice exercises, problem sets, and past midterm exams.
 Chapters enumerated with § refer to
 [*Calculus 9E* by Stewart](https://www.stewartcalculus.com).
 
