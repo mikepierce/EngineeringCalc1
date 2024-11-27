@@ -24,6 +24,15 @@
 
 <main>
 <ol>
+    <li>
+        In general, there is no explicit formula
+        for the roots of polynomial of degree higher than four.
+        However we can use Newton’s method 
+        to approximate the roots of any polynomial.
+        Approximate the value of the single real root
+        of this polynomial using Newton’s method.
+        \[x^5 + 2x^4 + 3x^3 + 4x^2 + 5x +6\]
+    </li>
     <li class="skip-page">
         <p>
         For any positive number \(N,\)
@@ -41,8 +50,6 @@
         from recursively applying this formula, 
         plugging each output back in as the next input,
         will approach the exact value of \(\sqrt{N}.\)
-        </p>
-        <p>
         This procedure is commonly called 
         the <em>Babylonian method</em> for computing square roots 
         since it was known to Babylonian mathematicians millennia ago.
@@ -51,31 +58,26 @@
             <li>
                 Show that this formula 
                 is the same as the “next guess” formula
-                that results would result from applying Newton’s method
+                that would result from applying Newton’s method
                 to approximate a solution of the equation \(x^2-N=0,\)
                 hence justifying why this Babylonian method works.
             </li>
             <li class="hard">
-                Write a computer program 
-                that iteratively applies this formula 
-                to calculate the square root of a number. 
-                Note: a TI-83/84+ calculators is programmable.
-            </li>
-            <li class="hard">
-                Using this formula, 
-                write a recursive computer program 
-                that calculates the square root
-                of a number accurate to the precision
-                of the language’s analogue of 
-                the <code>float</code> data type.
+                <p>
+                    Write a computer program 
+                    that iteratively applies this formula 
+                    to approximate the square root of a number
+                    accurate to the precision of your chosen language’s analogue 
+                    of the <code>float</code> data type.
+                    Note: a TI-83/84+ calculator is programmable.
+                    Once you have an iterative program, 
+                    see if you can alter it to make it recursive instead.
+                </p>
             </li>
             <li class="hard">
                 Come up with similar recursive formulas
-                for the following operations:
-                <figure>
-                    <div>\(\displaystyle \sqrt[3]{x} \) </div>
-                    <div>\(\displaystyle \frac{1}{x} \) </div>
-                </figure>
+                for the operations
+                \(\sqrt[3]{x} \) and \(\frac{1}{x}\,. \)
                 <aside>
                     It can be tough to figure out
                     the one for \(\frac{1}{x}\).
@@ -86,26 +88,28 @@
             </li>
         </ol>
     </li>
-    <li class="screen">
-        The equation \(\cos(x) = x\) has a single solution.
-        We call it the
-        <a href="https://mathworld.wolfram.com/DottieNumber.html">Dottie Number</a>.
+    <li>
+        <p>
+            The equation \(\cos(x) = x\) has a single solution.
+            We call it the
+            <a href="https://mathworld.wolfram.com/DottieNumber.html">Dottie Number</a>.
+            <!-- (Note that cosine expects its argument in <code>radian</code> measure.) -->
+        </p>
         <ol>
             <li>
-                Demonstrate <em>Newton’s method</em>
-                by calculating the Dottie number
-                accurate to eight decimal places.
+                Calculating the Dottie number
+                accurate to seven decimal places.
             </li>
             <li class="hard">
                 Write a program that performs Newton’s Method,
                 and use that program to calculate the Dottie number
-                accurate to the precision of the language’s <code>float</code> data type.
+                accurate to the precision 
+                of your chosen language’s <code>float</code> data type.
                 Note the TI-83/84+ series of calculators are programmable.
                 Can your program calculate \(x\)
                 to arbitrary precision?
             </li>
             <li class="hard">
-                Put your calculator in <code>radians</code> mode.
                 Take the cosine of <em>any</em> number.
                 Then take the cosine of that result.
                 And then take the cosine of that result.
@@ -118,16 +122,7 @@
             </li>
         </ol>
     </li>
-    <li>
-        In general, there is no explicit formula
-        for the roots of polynomial of degree higher than four.
-        However we can use Newton’s method 
-        to approximate the roots of any polynomial.
-        Approximate the value of the single real root
-        of this polynomial using Newton’s method.
-        \[x^5 + 2x^4 + 3x^3 + 4x^2 + 5x +6\]
-    </li>
-    <li>
+    <li class="screen">
         The polynomial \(x^3-x\) has three roots: 
         \(-1\) and \(0\) and \(1.\)
         Determine the set of all real numbers \(x\) 

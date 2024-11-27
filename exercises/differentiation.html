@@ -14,7 +14,6 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/katex.min.js" integrity="sha384-GxNFqL3r9uRJQhR+47eDxuPoNE7yLftQM8LcxzgS4HT73tp970WS/wV5p8UzCOmb" crossorigin="anonymous"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.18/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
     <style>body{background-image:linear-gradient(transparent, var(--background)), url("../banner.webp");} blockquote .katex {font-size: 0.833em;}</style>
-    <style> .squint {visibility:hidden;} .spoiler {visibility:hidden;} </style>
 </head>
 
 <body>
@@ -45,183 +44,101 @@
     <div> \(\displaystyle \frac{\mathrm{d}}{\mathrm{d}x} \bigl(\cot(x)\bigr) = -\csc^2(x) \) </div>
 </figure>
 </blockquote>
+
+<section>
+<h4>Explicit Differentiation</h4>
 <p>
     Each of the following expressions of a variable \(x\)
     can be thought of as the formula for a real-valued function
-    that’s continuous on some open subset of \(\mathbf{R}.\)
+    that’s continuous on some open subset of the real numbers.
     As exercise, for each of these functions,
-    write down a formula for its derivative.
-    <!--
-    <span class="screen">
-        Hovering over the blurry region under an expression with your mouse will reveal a formula for the derivative.
-    </span>
-    <span class="print">
-        Under each expression is a formula for its derivative.
-        To exercise effectively I recommend you copy the expression onto separate paper,
-        and initially refrain from looking at its derivative.
-    </span>
-    -->
+    write down an explicit formula for its derivative.
+</p>
+<figure class="skip-page">
+    <div> \(\displaystyle 17x^2-2 \) </div>
+    <div> \(\displaystyle x^{17} \) </div>
+    <div> \(\displaystyle \frac{1}{x^{17}} \) </div>
+    <div> \(\displaystyle \sqrt[17]{x} \) </div>
+    <div> \(\displaystyle \frac{1}{17}+\frac{1}{x} \) </div>
+    <div> \(\displaystyle 17x^{\pi}\) </div>
+    <div> \(\displaystyle 1.7x^{\pi}\) </div>
+    <div> \(\displaystyle \frac{1}{\pi}\) </div>
+    <div> \(\displaystyle 1.7^{-1}x^{7.1}\) </div>
+    <div> \(\displaystyle 1.7^{2}x^{-7.1}\) </div>
+    <div> \(\displaystyle x^{2}x^{-7.1}\) </div>
+    <div> \(\displaystyle x^{2}17^{-7.1}\) </div>
+    <div> \(\displaystyle x^3+x^2+x+1+\frac{1}{x}+\frac{1}{x^2}+\frac{1}{x^3}\) </div>
+    <div> \(\displaystyle \bigl(x-17\bigr)^2 \) </div>
+    <div> \(\displaystyle \bigl(x-17^2\bigr) \) </div>
+    <div> \(\displaystyle \bigl(x-2\bigr)^{17} \) </div>
+    <div> \(\displaystyle \Bigl(17x-2\Bigr)^{17} \) </div>
+    <div> \(\displaystyle \Bigl(17x^2-2\Bigr)^{17} \) </div>
+    <div> \(\displaystyle \Bigl(17x^2-2\Bigr)\Bigl(x^{17}-17x+2\Bigr) \) </div>
+    <div> \(\displaystyle \frac{17x^2-2}{x^{17}-17x+2} \) </div>
+    <div> \(\displaystyle \frac{1}{1+\frac{1}{x}} \) </div>
+    <div> \(\displaystyle \sqrt[7]{\sqrt[2]{\sqrt{x}}} \) </div>
+    <div> \(\displaystyle 71\sin(x) + 17\cos(x)\) </div>
+    <div> \(\displaystyle 17\sin(x)\cos(x)\) </div>
+    <div> \(\displaystyle \sin\bigl(\cos(x)\bigr)\) </div>
+    <div> \(\displaystyle 17\sin^{17}(x)\) </div>
+    <div> \(\displaystyle \sec\Bigl(x^{17}-x\Bigr)\) </div>
+    <div> \(\displaystyle \csc\bigl(\sqrt{17x-1}\bigr)\) </div>
+    <div> \(\displaystyle \sqrt{\cot(x)}\) </div>
+    <div> \(\displaystyle \tan\bigl(\sin(x)\bigr)\) </div>
+    <div> \(\displaystyle \tan^{17}\bigl(\sec(x)\bigr)\) </div>
+    <div> \(\displaystyle \tan(2x)\csc(17x)+1\) </div>
+    <div> \(\displaystyle \frac{\tan(2x)}{1+\csc(17x)}\) </div>
+    <div> \(\displaystyle \frac{1}{1+\frac{1}{\tan(17x)}}\) </div>
+    <div> \(\displaystyle \tan\bigl(\tan(x)\bigr)\) </div>
+    <div> \(\displaystyle \csc\bigl(\csc(x)\bigr)\) </div>
+    <div> \(\displaystyle \sec\bigl(\sin(x)\tan(x)\bigr)\) </div>
+    <div> \(\displaystyle x^{17}\cot^{17}(x) \) </div>
+    <div> \(\displaystyle \frac{\sqrt{x^{17}}}{\cot^{17}(x)} \) </div>
+    <div> \(\displaystyle \biggl(\frac{\sqrt{x}}{\sec(x)}\biggr)^{17} \) </div>
+    <div> \(\displaystyle \tan\Bigl(\cos\bigl(\cos(x)\bigr)\Bigr) \) </div>
+    <div> \(\displaystyle \sin\Bigl(\sec\bigl(\sec(x)\bigr)\Bigr) \) </div>
+    <div> \(\displaystyle \sin\bigl(\sec^{17}(x)\tan^{71}(x)\bigr) \) </div>
+    <div> \(\displaystyle \sin\biggl(\frac{\sin^2(x)+\cos^2(x)}{\tan^2(x)+1}\biggr) \) </div>
+</figure>
+</section>
+
+<section>
+<h4>Implicit Differentiation</h4>
+<p>
+    Each of the following equations involves an independent variable \(x\) 
+    and a variable \(y\) dependent on \(x.\)
+    As exercise, for each of these equations,
+    take the derivative with respect to \(x\) implicitly.
+    Then if possible, express the derivative of \(y\) 
+    explicitly as a function of \(x\).
 </p>
 <figure>
-    <div> 
-        \(\displaystyle 17x^2-2 \) 
-        <figcaption class="squint spoiler"> \(\displaystyle 34x \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle x^{17} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{1}{x^{17}} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sqrt[17]{x} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{1}{17}+\frac{1}{x} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle 17x^{\pi}\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{1}{\pi}\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle x^3+x^2+x+1+\frac{1}{x}+\frac{1}{x^2}+\frac{1}{x^3}\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \bigl(x-17\bigr)^2 \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \bigl(x-17^2\bigr) \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \bigl(x-2\bigr)^{17} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \Bigl(17x-2\Bigr)^{17} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \Bigl(17x^2-2\Bigr)^{17} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \Bigl(17x^2-2\Bigr)\Bigl(x^{17}-17x+2\Bigr) \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{17x^2-2}{x^{17}-17x+2} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{1}{1+\frac{1}{x}} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sqrt[5]{\sqrt[3]{\sqrt{x}}} \) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle 50\sin(x) + 15\cos(x)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle 150\sin(x)\cos(x)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sin\bigl(\cos(x)\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle 2\sin^2(x)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sec\Bigl(x^{17}-x\Bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \csc\bigl(\sqrt{7x-1}\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sqrt{\cot(x)}\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \tan\bigl(\sin(x)\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \tan^{17}\bigl(\sec(x)\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \tan(2x)\csc(17x)+1\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{\tan(2x)}{1+\csc(17x)}\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{1}{1+\frac{1}{\tan(17x)}}\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \tan\bigl(\tan(x)\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \csc\bigl(\csc(x)\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sec\bigl(\sin(x)\tan(x)\bigr)\) 
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle x^{17}\cot^{17}(x) \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \frac{\sqrt{x^{17}}}{\cot^{17}(x)} \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \biggl(\frac{\sqrt{x}}{\sec(x)}\biggr)^{17} \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \tan\Bigl(\cos\bigl(\cos(x)\bigr)\Bigr) \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sin\Bigl(\sec\bigl(\sec(x)\bigr)\Bigr) \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sin\bigl(\sec^{17}(x)\tan^{71}(x)\bigr) \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
-    <div> 
-        \(\displaystyle \sin\biggl(\frac{\sin^2(x)+\cos^2(x)}{\tan^2(x)+1}\biggr) \)
-        <figcaption class="squint spoiler"> \(\displaystyle TK \) </figcaption>
-    </div>
+    <div> \(\displaystyle xy = 1 \) </div>
+    <div> \(\displaystyle (xy)^2 = 1 \) </div>
+    <div> \(\displaystyle (xy)^2 = xy \) </div>
+    <div> \(\displaystyle (x+y)^2 = x+y \) </div>
+    <div> \(\displaystyle (17x+71y)^2 = 1 \) </div>
+    <div> \(\displaystyle \bigl(17xy+71y^2\bigr)^2 = 1 \) </div>
+    <div> \(\displaystyle \frac{x}{y} = x+y \) </div>
+    <div> \(\displaystyle \frac{xy}{y+17} = x+y \) </div>
 </figure>
+</section>
+
+<!--
+<section>
+<h4>Implicit Differentiation</h4>
+<p>
+    Each of the following equations involves an independent variable \(t\) 
+    and variabless \(x\) and \(y\) each dependent on \(t.\)
+    As exercise, for each of these equations,
+    take the derivative with respect to \(t\) implicitly.
+</p>
+<figure>
+    <div> \(\displaystyle TK \) </div>
+</figure>
+</section>
+-->
+
 </main>
 </body>
-
 </html>
-
